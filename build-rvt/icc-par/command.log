@@ -1,0 +1,7 @@
+#@ # 
+#@ # Running icc_shell Version G-2012.06-ICC-SP3 for amd64 -- Oct 12, 2012
+#@ # Date:   Wed Feb  6 17:46:20 2013
+#@ # Run by: bmzimmer@icluster9.EECS.Berkeley.EDU
+#@ 
+
+source -echo -verbose /scratch/bmzimmer/vlsi/lab-templates/decoder/build-rvt/icc-par/icc_setup.tcl
