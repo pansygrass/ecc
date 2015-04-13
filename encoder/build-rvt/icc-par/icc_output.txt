@@ -1,0 +1,1 @@
+Error: could not open script file "/scratch/bmzimmer/vlsi/lab-templates/decoder/build-rvt/icc-par/icc_setup.tcl" (CMD-015)
