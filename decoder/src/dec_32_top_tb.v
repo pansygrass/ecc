@@ -7,7 +7,7 @@ wire [38:0] OUT;
 wire [6:0] SYN;
 wire ERR, SGL, DBL;
 
-sec_ded_dec_top DUT0 (.IN(IN), .FINOUT(OUT), .SYN(SYN), .ERR(ERR), .SGL(SGL), .DBL(DBL));
+dec_32_top DUT0 (.IN(IN), .FINOUT(OUT), .SYN(SYN), .ERR(ERR), .SGL(SGL), .DBL(DBL));
 initial begin
 
 $vcdpluson;
