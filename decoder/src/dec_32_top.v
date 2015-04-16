@@ -107,8 +107,8 @@ endmodule
 
 
 module dec_32_top (input [38:0] IN, 
-    output reg [38:0] OUT, 
-    output reg [38:0] FINOUT, 
+//    output reg [38:0] OUT, 
+    output wire [38:0] FINOUT, 
     output reg [6:0] SYN, 
     output reg ERR, SGL, DBL);
 
@@ -131,7 +131,7 @@ module dec_32_top (input [38:0] IN,
        DBL <= ~^SYN & ERR;
     end
 
-corrector (.IN(OUT), .SYN(SYN), .SGL(SGL), .OUT(FINOUT));
+corrector mod (.IN(IN), .SYN(SYN), .SGL(SGL), .OUT(FINOUT));
     
 endmodule
 
