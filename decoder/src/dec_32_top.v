@@ -108,6 +108,7 @@ endmodule
 
 module sec_ded_dec_top (input [38:0] IN, 
     output reg [38:0] OUT, 
+    output reg [38:0] FINOUT, 
     output reg [6:0] SYN, 
     output reg ERR, SGL, DBL);
 
@@ -130,6 +131,7 @@ C[6:0] = IN[38:32];
        DBL <= ~^SYN & ERR;
     end
 
+corrector (.IN(OUT), .SYN(SYN), .SGL(SGL), .OUT(FINOUT));
     
 endmodule
 
