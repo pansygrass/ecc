@@ -1,0 +1,907 @@
+####################################################################################
+# IC Compiler Hierarchical Reference Methodology Release Notes
+# Version: D-2010.03-SP2 (July 6, 2010)
+# Copyright (C) 2007-2010 Synopsys All rights reserved.
+####################################################################################
+
+D-2010.03-SP2
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Hierarchical Reference Methodology version D-2010.03-SP2.
+
+*  Multicore support has been added for create_fp_placement by adding the
+   "set_host_options -max_cores $ICC_NUM_CORES" command to create_plangroups_dp.tcl.
+
+   In addition, the "set_host_options -max_cores $ICC_NUM_CORES" command has been
+   removed from pin_assignment_budgeting since common_optimization_settings_icc.tcl,
+   which is sourced at the beginning of the step, already includes this command.
+
+
+D-2010.03-SP1
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Hierarchical Reference Methodology version D-2010.03-SP1.
+
+Note:
+   The D-2010.03-SP1 IC Compiler Hierarchical Reference Methodology is
+   compatible with the IC Compiler version D-2010.03-SP1-1.
+
+*  The file feasibility_on_plangroups_dp.tcl has been renamed
+   routeability_on_plangroups_dp.tcl.
+
+   The scripts and Makefile_hier have been updated.
+
+*  The check_fp_rail command has been added as a comment following the
+   synthesize_fp_rail command in routeability_on_plangroups_dp.tcl.
+
+*  The IC Compiler Hierarchical Reference Methodology does not support the new
+   Physical Guidance option in RMgen.
+
+
+D-2010.03
+=========
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Hierarchical Reference Methodology version D-2010.03.
+
+*  The reference methodology directory structure has been reorganized for all
+   versions of the product reference methodologies.
+
+   o  The setup files and makefiles have been moved to a new directory named
+      rm_setup.
+
+   o  The scripts directory has been renamed rm_<prod>_scripts, where <prod> is
+      the product identifier: dc, icc, pt, or tmax.
+
+   These changes are the same for every product reference methodology.
+
+   Due to the directory structure change, the procedure for running the reference
+   methodology scripts has changed from previous releases. For example, to run the IC Compiler Hierarchical Reference methodology scripts, enter
+
+   % make -f rm_setup/Makefile_hier hier_dp
+
+   See README.ICC-HRM.txt if you need more details.
+
+*  Placement and shaping has been updated.
+
+   o  Comments regarding "congestion aware shaping" have been added in
+      create_plangroups_dp.tcl.
+
+   o  Comments regarding "auto detection of logical hierarchies other than existing
+      placegroups" have been added in create_plangroups_dp.tcl.
+
+*  The black box flow has been updated.
+
+   To include black box support in the generated scripts, you now select
+   BLACK_BOX for the Design Style option in RMgen.
+   Available only when DEFAULT (channeled) is selected for the Floorplan Style option in RMgen.
+
+   In previous versions, black box support was controlled by using the tool
+   command language (Tcl) variable ICC_DP_DESIGN_STYLE in icc_setup.tcl.
+   All related scripts have been updated.
+
+   All the ICC_DP_BLACK_BOX* variables are still effective. For more information,
+   see the release notes section for version C-2009.06-SP4.
+
+*  Multiple instantiated modules flow support has been added.
+
+   To include multiple instantiated modules support in the generated scripts,
+   select MIM for the Design Style option in RMgen.
+   Available only when DEFAULT (channeled) is selected for the Floorplan Style option in RMgen.
+
+   The following files have been enhanced:
+
+   o  init_design_icc.tcl
+
+      The "uniquify_fp_mw_cel -store_mim_property" command is used for multiple
+      instantiated modules.
+
+   o  icc_setup.tcl
+
+      New variables, ICC_MIM_INSTANCE_LIST and ICC_MIM_MASTER_LIST, have been added
+      to mark multiple instantiated module instances and master instances.
+
+   o  create_plangroups_dp.tcl
+
+      Comments of sample copy_mim commands have been added.
+
+   o  pin_assignment_budgeting_dp.tcl
+
+      The select_mim_master_instance command applies to ICC_MIM_MASTER_LIST.
+
+   o  commit_dp.tcl
+
+      The report_mim command has been added.
+
+*  The optimiza_fp_timing command usage for in-place optimization has been updated.
+
+   The hierarchical flow contains two in-place optimizations.
+
+   o  In the updated flow, the first in-place optimization runs with the -hfs_only
+      option and the second in-place optimization runs with all defaults.
+
+      In previous releases, the first in-place optimization runs with all defaults
+      and second in-place optimization optimizes only feedthrough nets.
+
+   o  For the first in-place optimization, the prefix is now dp_ipo_hfs.
+
+   o  For the second in-place optimization, the prefix is now dp_ipo.
+
+*  New channeled, narrow-channeled, and abutted floorplan style configurations
+   have been added.
+
+   To generate the scripts for a particular floorplan style, select the appropriate
+   value for the Floorplan Style option in RMgen: CHANNELED (the default),
+   NARROW-CHANNELED, or ABUTTED.
+
+   The create_plangroups_dp.tcl, feasibility_on_plangroups_dp.tcl and
+   pin_assignment_budgeting_dp.tcl scripts are generated based on the style you select.
+   The selection affects mainly the options used by the shape_fp_blocks,
+   set_fp_pin_constriants and optimmize_fp_timing commands.
+
+   o  For default and narrow-channeled styles, an additional option, -channels, is
+      enabled in the shape_fp_blocks command.
+
+   o  The "set_fp_pin_constraints -allow_feedthroughs" command is optional with the
+      channeled style but is enabled for the other styles.
+
+   o  For narrow-channeled style, an additional option, -reserved_channel_threshold,
+      is enabled in the set_fp_pin_constraints command.
+
+   o  For the abutted style, an additional option, -no_new_cells_at_top_level, is
+      enabled in the optimize_fp_timing command.
+
+*  Clock tree planning has been updated.
+
+   o  The "mark_clock_tree -clock_net" command has been added prior to the
+      set_fp_pin_constraints in feasibility_on_plangroups_dp.tcl and the one in
+      pin_assignment_budgeting_dp.tcl is removed.
+
+   o  Comments regarding the values used by the set_fp_clock_plan_options options
+      have been updated, changing -keep_block_tree from false to true and changing
+      update_clock_latency from true to false.
+
+      Comments have also been added to avoid clock feedthroughs on plan groups.
+
+      The pin_assignment_budgeting_dp.tcl file has been updated.
+
+*  In feasibility_on_plangroups_dp.tcl, for congestion estimation,
+   when ICC_DP_USE_ZROUTE is set to FALSE, the route_fp_proto command is used and
+   when ICC_DP_USE_ZROUTE is set to TRUE, the "set_route_zrt_global_options -effort minimum"
+   and "route_zrt_global" commands are used.
+
+*  The "create_ilm option -keep_parasitics" command has been removed in
+   prepare_blocks_dp.tcl.
+
+*  Design for test (DFT) is no longer an RMgen configuration and has been converted
+   to a Tcl variable in icc_setup.tcl. To run the DFT-aware hierarchical flow, set
+   both DFT and ICC_DP_DFT_FLOW to TRUE.
+
+*  The write_def and write_floorplan options have been updated in
+   prepare_blocks_dp.tcl to generate outputs that are compatible with DC Ultra topographical mode.
+
+*  New variables, REPORTS_DIR_*, have been added for step-specific reporting
+   directories.
+
+   If you want to have a specific report directory for each step, use the
+   REPORTS_DIR_* variables instead of the REPORTS_DIR variable. By default,
+   the tool writes all the reports to REPORTS_DIR and there is no impact on
+   existing usage.
+
+   The icc_setup.tcl file and all scripts have been updated.
+
+
+C-2009.06-SP4
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Hierarchical Reference Methodology version C-2009.06-SP4.
+
+*  Support has been added for the new ASCII-based black box flow.
+
+   To enable the black box flow, set ICC_DP_DESIGN_STYLE to black_box in
+   icc_setup.tcl. To learn more about the black box flow, please refer to
+   SolvNet article number 028924.
+
+   The following scripts have been enhanced:
+
+   o  icc_scripts/init_design_icc.tcl
+
+      Specific commands and notes for the black box flow, such as
+      import_fp_blax_box, have been added.
+
+   o  icc_dp_scripts/feasibility_on_plangroups_dp.tcl
+
+      Pin assignment for black boxes has been added before optimize_fp_timing.
+
+   o  icc_dp_scripts/prepare_blocks_dp.tcl
+
+      Preparation for black box blocks has been added.
+
+   The following new variables have been added in icc_setup.tcl:
+
+   o  ICC_DP_DESIGN_STYLE
+
+      Set this variable to black_box to enable the black box flow.
+
+   o  ICC_DP_BLACK_BOX_LIST
+
+      Use this variable to specify a list of modules as black boxes.
+
+   o  ICC_DP_BLACK_BOX_ESTIMATE_SIZE_SCRIPT
+
+      Use this variable to specify a script containing estimate_fp_black_boxes
+      commands.
+
+   o  ICC_DP_BLACK_BOX_QTM_DB_LIST
+
+      Use this variable to specify a list of your black box quick timing model .db
+      files if you plan to run the timing-driven black box flow. These .db files
+      will be added to link_library.
+
+   o  ICC_DP_BLACK_BOX_VERILOG_LIST
+
+      For block implementation, use this variable to specify a matching list of
+      Verilog files for the black boxes you specify with ICC_DP_BLACK_BOX_LIST.
+      The Verilog files that you specify are set as input Verilog for the
+      corresponding black boxes when you start block implementation.
+
+   o  ICC_DP_BLACK_BOX_SDC_LIST
+
+      For block implementation, use this variable to specify a matching list of
+      Synopsys Design Constraints (SDC) files for the black boxes you specify with
+      ICC_DP_BLACK_BOX_LIST. The SDC files that you specify are set as input SDC
+      for the corresponding black boxes when you start block implementation.
+
+   To run the black box flow, perform the following tasks in addition to the
+   instructions described in README.ICC-HRM.txt:
+
+   o  Set ICC_DP_DESIGN_STYLE to black_box.
+
+   o  Specify the following black box variables, which are described above:
+
+      ICC_DP_BLACK_BOX_LIST
+      ICC_DP_BLACK_BOX_ESTIMATE_SIZE_SCRIPT
+      ICC_DP_BLACK_BOX_QTM_DB_LIST
+      ICC_DP_BLACK_BOX_VERILOG_LIST
+      ICC_DP_BLACK_BOX_SDC_LIST
+
+   o  During block implementation, if your black box blocks contain hard macros,
+      you must finalize and fix the hard macro locations after init_design_icc
+      step is complete and before you continue with place_opt_icc step.
+
+      Block implementation is step 3 in the instructions in README.ICC-HRM.txt.
+      Hard macros in the black boxes are not yet available for placement during
+      hierarchical design planning, which is step 2 in README.ICC-HRM.txt. To
+      place the hard macros, you can either use the create_fp_placement command
+      or use the IC Compiler Design Planning Reference Methodology, which is
+      described in README.ICC-DP-RM.txt.
+
+      After finishing the hard macro placement, you should save it with the same
+      CEL view name, which is init_design_icc by default, or as specified by
+      $ICC_FLOORPLAN_CEL and then continue with place_opt_icc step.
+
+
+C-2009.06-SP3
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Hierarchical Reference Methodology version C-2009.06-SP3.
+
+*  A placeholder has been added after the optimize_fp_timing command in
+   icc_dp_scripts/feasibility_on_plangroups_dp.tcl to allow you to source your
+   customized preroute_standard_cell script.
+
+   A new variable, CUSTOM_ICC_DP_PREROUTE_STD_CELL_SCRIPT, has been created
+   for this feature in icc_setup.tcl.
+
+*  The following features have been updated:
+
+   o  For multivoltage checking completeness, the "check_mv_design -power -verbose"
+      command has been replaced by the "check_mv_design -verbose" command
+      throughout the IEEE 1801 (TM) flow. IEEE 1801 is also known as Unified Power
+      Format (UPF).
+
+      Changes have been made in the following scripts:
+
+      icc_dp_scripts/pin_assignment_budgeting_dp.tcl
+      icc_dp_scripts/feasibility_on_plangroups_dp.tcl
+
+   o  The optimize_dft step in icc_dp_scripts/create_plangroups_dp.tcl has been
+      moved from feasibility_on_plangroups_dp to the end of the
+      create_plangroups_dp step.
+
+   o  The sourcing of the fp_mcmm_scripts in icc_dp_scripts/prepare_block_dp.tcl
+      for blocks in the multicorner and multimode flow has been removed because
+      it is no longer needed.
+
+
+C-2009.06-SP2
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Reference Methodology version C-2009.06-SP2.
+
+The following new feature has been added:
+
+*  The DFT-aware hierarchical design planning flow has been added.
+
+   o  To enable this feature, use the new variable ICC_DP_DFT_FLOW.
+
+   o  You must also specify the ASCII full-chip SCANDEF file by using the variable
+      ICC_IN_FULL_CHIP_SCANDEF_FILE.  This file is read during the init_design_icc
+      step.
+
+   Enhancements have been made in the following scripts:
+
+   o  In init_design_icc.tcl:
+
+      -- Added read_def for ICC_IN_FULL_CHIP_SCANDEF_FILE
+
+         The script runs remove_scan_def before read_def for
+         ICC_IN_FULL_CHIP_SCANDEF_FILE if ICC_INIT_DESIGN_INPUT is set to DDC.
+
+      -- Added check_scan_chain
+
+   o  In icc_dp_scripts/feasibility_on_plangroups_dp.tcl:
+
+      The optimize_dft -plan_group and check_scan_chain commands have been added.
+
+   o  In icc_dp_scripts/commit_dp.tcl:
+
+      The check_scan_chain command has been added after commit_fp_plan_groups. The
+      commit_fp_plan_groups command automatically updates and pushes down SCANDEF
+      for the block levels.
+
+   o  In icc_scripts/place_opt_icc.tcl:
+
+      The read_def command is now skipped on the block level if ICC_DP_DFT_FLOW
+      is set to TRUE.
+
+*  The following features have been updated:
+
+   o  Clock tree planning has been enhanced as follows:
+
+      -- This section is now fully uncommented and is executed if you set
+         ICC_DP_CTP to TRUE.
+
+      -- To enable clock tree planning, you must also specify
+         ICC_DP_CTP_ANCHOR_CEL.
+
+   o  Feedthrough creation is now allowed for the hierarchical IEEE 1801 (TM) flow.
+      IEEE 1801 is also known as Unified Power Format (UPF).
+
+      Changes have been made to the set_fp_pin_constraints and derive_pg_connection
+      sections in icc_dp_scripts/pin_assignment_budgeting_dp.tcl.
+
+*  The following new IC Compiler Reference Methodology variables have been added:
+
+   o  ICC_DP_DFT_FLOW
+   o  ICC_IN_FULL_CHIP_SCANDEF_FILE
+
+
+C-2009.06-SP1
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Reference Methodology version C-2009.06-SP1.
+
+*  In icc_dp_scripts/create_plangroups_dp.tcl and feasibility_dp.tcl:
+
+   Updated comments for CUSTOM_ICC_DP_PLACE_CONSTRAINT_SCRIPT:
+
+   # set_fp_macro_array -name array1 -align_edge t -elements {macro_1 macro_2 macro_3}
+
+*  In icc_dp_scripts/feasibility_on_plangroups_dp.tcl and feasibility_dp.tcl:
+
+   Updated comments for CUSTOM_ICC_DP_PNS_CONSTRAINT_SCRIPT:
+
+   # set_fp_rail_constraints -set_global -keep_ring_outside_core -no_routing_over_hard_macros
+
+*  In icc_dp_scripts/pin_assignment_budgeting_dp.tcl:
+
+   o  Updated the clock tree planning section, which is commented out, with
+      current preferred options:
+
+      # # For abutted designs, set following variables:
+      # #	set cp_in_full_abut_mode true
+      # #	set cp_full_abut_cts_region_aware true
+      #
+      # set clock_plan_option_cmd "set_fp_clock_plan_options \
+      #                         -route_mode none \
+      #                         -keep_block_tree false \
+      #                         -update_clock_latency true \
+      #                         -output_directory ${RESULTS_DIR}/ctp_output"
+      # if {$ICC_DP_CTP_ANCHOR_CEL != ""} {lappend clock_plan_option_cmd -anchor_cell $ICC_DP_CTP_ANCHOR_CEL}
+      # eval $clock_plan_option_cmd
+      #
+      #	## Here're some options for set_fp_clock_plan_options to consider:
+      #	#  -clock_nets {CLK}
+      #	#  -no_feeds_plan_group [get_plan_groups *] ;# use this in channeled design
+
+      Note:
+          The -update_clock_latency option requires the GALAXY-PSYN license
+          which will not be required in C-2009.06-SP2 release.
+
+   o  Updated allocate_fp_budgets to use BUDGETING_SDC_OUTPUT_DIR:
+
+      allocate_fp_budgets -file_format_spec "$BUDGETING_SDC_OUTPUT_DIR/m.sdc"
+
+*  In icc_dp_scripts/prepare_block_dp.tcl:
+
+   o  Updated hard-coded SDC directory with BUDGETING_SDC_OUTPUT_DIR
+
+   o  Added copy and loading of fp_mcmm_scripts for multicorner and multimode
+      designs. In this release, it is only supported for none UPF designs.
+
+*  In the following files from icc_dp_scripts:
+
+      create_plangroups_dp.tcl
+      feasibility_on_plangroups_dp.tcl
+      pin_assignment_budgeting_dp.tcl
+      commit_dp.tcl
+
+   o  Updated "source ./icc_scripts/common_placement_settings_icc.tcl"
+      to "source common_placement_settings_icc.tcl"
+
+   o  Updated "source ./icc_scripts/common_optimization_settings_icc"
+      to "source common_optimization_settings_icc"
+
+*  In icc_scripts/init_design_icc.tcl:
+
+   Added CUSTOM_LOAD_ASCII_UPF_SCRIPT_LIST support for the hierarchical UPF
+   ASCII flow.
+
+   If you are running the hierarchical UPF flow with ASCII input--for example,
+   ICC_INIT_DESIGN_INPUT is set to VERILOG and you have UPF files for each
+   power domain and the top-level design in ASCII format--you can use the
+   variable CUSTOM_LOAD_ASCII_UPF_SCRIPT_LIST in icc_setup.tcl to provide
+   customized scripts that load and set up UPF.
+
+   For example,
+
+   set CUSTOM_LOAD_ASCII_UPF_SCRIPT_LIST \
+       "your_upf_script_1 your_upf_script_2 your_upf_script_top"
+
+   In each script, you should include the following information:
+
+   # ex, your_upf_script_1
+   set_scope power_domain_1
+   load_upf ./results/power_domain_1.mapped.upf
+   set_voltage 1.080 -object_list {VDD VDDMS}
+   set_voltage 0.000 -object_list {VSS}
+
+   # ex, your_upf_script_2
+   set_scope ../power_domain_2
+   load_upf ./results/power_domain_2.mapped.upf
+   set_voltage 1.080 -obj {VDD}
+   set_voltage 0.864 -obj {VDDG VDDGS}
+   set_voltage 0.000 -obj {VSS}
+
+   # ex, your_upf_script_top
+   set_scope /
+   load_upf ./results/power_domain_top.mapped.upf
+   set_voltage 0.864 -obj {VDDX MemXHier/VDDXS VDDY MemYHier/VDDYS}
+   set_voltage 1.080 -obj {VDD power_domain_1/VDDMS}
+   set_voltage 0.864 -obj {VDDG power_domain_2/VDDGS}
+   set_voltage 0.000 -obj {VSS}
+   set_voltage 0.000 -obj {VSS MemXHier/VSS MemYHier/VSS}
+
+
+C-2009.06
+=========
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Reference Methodology version C-2009.06.
+
+*  Added Zroute support
+
+   To enable Zroute for hierarchical design planning,
+
+   1. Set ICC_DP_USE_ZROUTE to true in icc_setup.tcl.
+
+   2. For blocks and top-level implementation, use Makefile_zrt instead of Makefile.
+
+   Details of the changes
+
+   o  In icc_setup.tcl:
+      -- Added ICC_DP_USE_ZROUTE
+
+   o  In icc_dp_scripts/feasibility_on_plangroups_dp.tcl:
+      -- Added Zroute support for plan group aware routing for routability check:
+
+	 if {$ICC_DP_USE_ZROUTE} {
+		 set_host_options -max_cores $ICC_NUM_CORES
+	         set_route_zrt_global_options -effort low
+	         set_route_zrt_common_options -plan_group_aware all_routing
+	 	 ## For large designs, you can try top level routing only by:
+	 	 #    set_route_zrt_common_options -plan_group_aware top_level_routing_only
+	         route_zrt_global -congestion_map_only true
+	 } else {
+	 	 set_fp_flow_strategy -plan_group_aware_routing true
+	 	 route_fp_proto -effort medium -congestion_map_only
+	 }
+	
+   o  In icc_dp_scripts/pin_assignment_budgeting_dp.tcl:
+      -- Added Zroute support for plan group aware routing for pin assignment:
+
+         if {$ICC_DP_USE_ZROUTE} {
+		 set_host_options -max_cores $ICC_NUM_CORES
+                 set_route_zrt_global_options -effort low
+                 set_route_zrt_common_options -plan_group_aware all_routing
+                 ## For large designs, you can try top level routing only by:
+                 #  set_route_zrt_common_options -plan_group_aware top_level_routing_only
+                 route_zrt_global
+         } else {
+                 set_fp_flow_strategy -plan_group_aware_routing true
+                 route_global
+         }
+
+   o  In icc_dp_scripts/prepare_blocks_dp.tcl:
+      -- For blocks and top, added Makefile_zrt and icc_zrt_scripts to the
+         list of files to be copied
+
+*  In icc_dp_scripts/create_plangroups_dp.tcl:
+
+   o  Updated comments for "Create Plangroups" section on write_floorplan requiring
+      use of "set create_fp_plan_groups true"
+
+	## 3.If you already have a dumped floorplan file containing plangroups,
+        ##   specify it in the variable ICC_DP_PLANGROUP_FILE (icc_setup.tcl)
+	##   Note: The dumped floorplan file should be generated from the
+	##   write_floorplan command.
+	##   Starting from the C-2009.06 release, you need to set the variable
+	##   create_fp_plan_groups to true before using write_floorplan to write
+	##   out plangroups.
+
+*  In icc_dp_scripts/feasibility_on_plangroups_dp.tcl:
+
+   o  Removed comments for setting automatic high-fanout synthesis for
+      optimize_fp_timing.
+
+	## AHFS Options for optimize_fp_timing
+	#       set_ahfs_options -remove_effort none -hf_threshold 20
+
+      Starting in the C-2009.06 release, the new option -optimize_buffer_tree has
+      been added, which uses a new automatic high-fanout synthesis engine.
+      It is recommended to use -optimize_buffer_tree option instead which is on by
+      default and doesn't require to be specified.
+
+   o  Added trace mode for optimize_fp_timing to comments in
+      icc_dp_scripts/feasibility_on_plangroups_dp.tcl
+
+*  In icc_dp_scripts/pin_assignment_budgeting_dp.tcl
+
+   Removed change_names -rules verilog -hierarchy prior to budgeting
+
+   o  Using change_names in the outputs_icc step at the end of block implementation
+      is recommended.
+
+   o  If you turn on feedthrough for pin assignment before commit and see ZQ-100
+      messages, some but not all the bits of a bus have feedthroughs.  In this case,
+      change_names does not recognize the bits as a single bus and renames them
+      differently.
+
+      This can cause a problem after change_names when linking the created block's
+      interface logic model (ILM) and FRAM views at the top level. To resolve this
+      issue, please refer to SolvNet article 024410.
+
+
+B-2008.09-SP5
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Reference Methodology version B-2008.09-SP5.
+
+*  In icc_dp_scripts/pin_assignment_budgeting_dp.tcl
+
+   Added -keep_buses_together to set_fp_pin_constraints, and
+   added change_names -rules verilog -hierarchy prior to budgeting
+
+   o  These are workarounds for STAR 9000309930 and STAR 9000310507
+
+   o  If you turn on feedthrough for pin assignment before commit and see ZQ-100
+      messages, some but not all the bits of a bus have feedthroughs.  In this case,
+      change_names does not recognize the bits as a single bus and renames them
+      differently.
+
+      This can create a problem after change_names when linking the block ILMs
+      created at the top level.  To resolve this issue, please refer to SolvNet
+      article 024410.
+
+*  In icc_dp_scripts/prepare_block_dp.tcl
+
+   o  Removed link
+
+   o  Added 2 options to write_def: -specialnets -vias
+
+
+B-2008.09-SP4
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Reference Methodology version B-2008.09-SP4.
+
+*  In icc_setup.tcl
+
+   o  Corrected the description for ICC_DP_FIX_MACRO_LIST:
+      specify "" should unfix all macros instead of fixing them.
+
+   o  Made HIERARCHICAL_CELLS from common_setup.tcl the default value for
+      ICC_DP_PLAN_GROUPS
+
+      This way it will pick up the value you specify during Design Compiler Reference Methodology session.
+
+   o  Added CUSTOM_ICC_DP_PNS_SCRIPT and CUSTOM_ICC_DP_PNA_SCRIPT variables
+
+*  In icc_dp_scripts/create_plangroups_dp.tcl
+
+   o  Added ICC_DP_SET_HFNS_AS_IDEAL_THRESHOLD and ICC_DP_SET_MIXED_AS_IDEAL
+      variables and commands
+
+   o  Added ICC_DP_PLACEMENT_VA_NET_WEIGHT variable and command for MV flow
+
+*  In icc_dp_scripts/feasibility_on_plangroup_dp.tcl
+
+   o  Added CUSTOM_ICC_DP_PNS_SCRIPT variable for PNS and CUSTOM_ICC_DP_PNA_SCRIPT
+      variable for PNA
+
+   o  Added the following conditional command before route_fp_proto:
+
+      set_fp_pin_constraints -allow_feedthroughs on -exclude_clock_feedthroughs on
+
+      Now route_fp_proto is synchronized with route_global in terms of allowing feedthrough creation.
+
+   o  Added PG connection section same as the one used in IC Compiler Reference
+      Methodology.
+
+*  In icc_dp_scripts/pin_assignment_budgeting_dp.tcl
+
+   o  Added PG connection section same as the one used in IC Compiler Reference
+      Methodology.
+
+In this release, additional changes have been made to support the .ddc-based
+hierarchical UPF flow. Here are the corresponding changes:
+
+*  In icc_scripts/init_design_icc.tcl (shared with IC Compiler Reference
+   Methodology)
+
+   o  Moved the report_voltage_area -all command to follow "Creating the physical MV
+      objects".
+
+   o  Added the -all option to the report_power_domain command.
+
+   o  Added the CUSTOM_CREATE_VA_SCRIPT variable to allow loading of the customized
+      voltage area creation script.
+
+   o  Added the ICC_SKIP_IN_BLOCK_IMPLEMENTATION variable, which allows you to
+      disable the "Creating the physical MV objects" and "MTCMOS CELL INSTANTIATION"
+      sections for block-level implementation.
+
+      You can disable the sections on the full chip level by manually setting the
+      variable to true.
+
+      The Hierarchical Reference Methodology sets it to true automatically for
+      blocks and top during the prepare_block_dp step.
+
+*  In icc_dp_scripts/feasibility_on_plangroups.tcl
+
+   o  Updated PNS and PNA sections with additional comments for MV flow
+
+   o  Removed the ICC_DP_ALLOW_FEEDTHROUGH control for hierarchical UPF flow
+      because allowing feedthrough is not recommended in the hierarchical UPF flow.
+
+*  In icc_dp_scripts/pin_assignment_budgeting_dp.tcl
+
+   o  Removed the ICC_DP_ALLOW_FEEDTHROUGH control for hierarchical UPF flow
+      because allowing feedthrough is not recommended in the hierarchical UPF flow.
+
+*  In icc_dp_scripts/commit_dp.tcl:
+
+   o  Added the following command to generate results for use in the Design Compiler
+      Reference Methodology:
+
+      report_voltage_area -all > ${REPORTS_DIR}/fullchip.icc_dp.voltage_area.rpt
+
+*  In icc_dp_scripts/prepare_block_dp.tcl
+
+   o  For each block, added the following command to generate results for use in the
+      Design Compiler Reference Methodology:
+
+      report_voltage_area -all > ${REPORTS_DIR}/${block}.icc_dp.voltage_area.rpt
+
+   o  For the top level, added the following command:
+
+      report_voltage_area -all > ${REPORTS_DIR}/top.icc_dp.voltage_area.rpt
+
+   o  Renamed the subdirectory for the top level to ${DESIGN_NAME} for consistency
+      with the Design Compiler Reference Methodology; it is also soft linked to
+      "top"
+
+   o  For each block and top, set ICC_SKIP_IN_BLOCK_IMPLEMENTATION to true
+
+*  In icc_scripts/output_icc.tcl (shared with IC Compiler Reference Methodology)
+
+   o  Replaced create_ilm with the following command for the hierarchical UPF flow:
+
+      create_ilm -include_xtalk -compact none -traverse_disabled_arcs
+
+
+B-2008.09-SP3
+=============
+
+This section describes enhancements in the IC Compiler Reference Methodology
+version B-2008.09-SP3.
+
+*  In icc_dp_scripts/feasibility_on_plangroups_dp.tcl
+
+   o  Added the source $CUSTOM_ICC_DP_PNS_CONSTRAINT_SCRIPT command
+
+
+B-2008.09-SP2
+=============
+
+This section describes enhancements in the IC Compiler Reference Methodology
+version B-2008.09-SP2.
+
+*  In icc_dp_scripts/pin_assignment_budgeting_dp.tcl
+
+   o  Changed the comments for set_fp_clock_plan_options from -route_mode global to
+      none
+
+
+B-2008.09-SP1
+=============
+
+This section describes enhancements in the IC Compiler Reference Methodology
+version B-2008.09-SP1.
+
+*  In icc_dp_scripts/prepare_block_dp.tcl
+
+   o  Added the following command to handle modules with the same module master
+      name:
+
+      set unique_block_list [lsort -unique $block_list]
+
+
+B-2008.09
+=========
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Reference Methodology version B-2008.09.
+
+*  In icc_dp_scripts/create_plangroups_dp.tcl
+
+   o  Changed the macros_on_edge defaults in the tool to auto so the flow is
+      updated.
+
+      -- set_fp_placement_strategy -macro_on_edge off
+      -- create_fp_placement
+      -- shape_fp_blocks
+      -- set_fp_placement_strategy -macro_on_edge auto
+      -- create_fp_placement
+
+   o  Changed the create_fp_plan_group_padding syntax in the tool so the script is
+      updated:
+
+      create_fp_plan_group_padding -internal_widths {2 2 2 2} -external_widths {2 2 2 2} [get_plan_groups *]
+
+*  In icc_dp_scripts/pin_assignment_budgeting_dp.tcl
+
+   o  Renamed the ICC_DP_ALLOW_FEEDTHRU variable to ICC_DP_ALLOW_FEEDTHROUGH
+
+   o  Changed the analyze_fp_routing syntax in the tool so script is updated.
+      -- analyze_fp_routing -finalize plan_groups
+
+*  In icc_setup.tcl
+
+   o  Replaced the ICC_DP_SPLIT_TOP_CEL_NAME variable with ICC_DP_COMMIT_CEL.
+
+
+A-2007.12-SP5
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Reference Methodology version A-2007.12-SP5.
+
+*  In Makefile_hier
+
+   o  Split the single-step hierarchy_dp into four steps, with each step
+      corresponding to a script.
+
+      This should make it easier to stop, check, and modify your design.
+
+   o  The four steps are grouped based on functionality:
+
+      -- create_plangroups_dp
+      -- feasibility_on_plangroups_dp
+      -- pin_assignment_budgeting_dp
+      -- commit_dp.
+
+*  In icc_setup.tcl, you can set starting CEL name of the steps from the following
+   variables:
+
+   o  set ICC_DP_CREATE_PLANGROUPS_CEL "create_plangroups_dp"
+
+   o  set ICC_DP_FEASIBILITY_ON_PLANGROUPS_CEL "feasibility_on_plangroups_dp"
+
+   o  set ICC_DP_PIN_ASSIGNMENT_BUDGETING_CEL "pin_assignment_budgeting_dp"
+
+   o  set ICC_DP_COMMIT_CEL "commit_dp"
+
+*  Created a new file in icc_dp_scripts for each of the new steps:
+
+   o  create_plangroups_dp.tcl: plan group creation, shaping, and placement.
+
+   o  feasibility_on_plangroups_dp.tcl: PNS/PNA, proto route, and in place
+      optimization
+
+   o  pin_assignment_budgeting_dp.tcl: pin assignment and timing budgeting
+
+   o  commit_dp.tcl: commit and split design
+
+
+A-2007.12-SP4
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Reference Methodology version A-2007.12-SP4.
+
+*  In icc_dp_scripts/hierarchy_dp.tcl:
+
+   o  In the Create Plangroups section, removed the hard-coded -utilization 0.7
+      option for the
+
+      create_plan_groups command; the plan group utilization is now determined by the tool.
+
+   o  Updated comments in the Create Plangroups section to list all possible entry
+      points.
+
+   o  The Create Plangroups section now checks for ICC_DP_PLANGROUP_FILE first
+      instead of ICC_DP_PLANGROUPS, which is useful if you have run through it the
+      first time and want to simply reuse the output plan group file.
+
+   o  Updated the Plangroup Shaping section.
+
+      If you provide ICC_DP_PLANGROUP_FILE, plan group shaping is skipped but virtual flat placement on plan groups can still run.
+
+   o  Updated the Clock Tree Planning section and added ICC_DP_CTP as new control.
+
+      If you want to use clock tree planning, uncomment the whole section.
+      Then you can use the variable to control it.
+
+      Note that you might have to set additional options for clock tree planning to work properly.
+
+   o  Updated the Pin Assignment section and removed the remove_route_by_type
+      command.
+
+*  In icc_dp_scripts/prepare_block_dp.tcl.
+
+   o  Removed the read_sdc command for block preparation
+
+      SDC constraints are now pushed down to the block automatically by the tool.
+
+
+A-2007.12-SP2
+=============
+
+This section describes new features, changes, and enhancements in the IC Compiler
+Reference Methodology version A-2007.12-SP2.
+
+*  The descriptions for ICC_DP_PLAN_GROUPS and ICC_DP_CTP_ANCHOR_CEL in
+   icc_setup.tcl have been updated.
+
+*  icc_dp_scripts/hierarchy_dp.tcl has been updated with the following:
+
+   o  Comments in the clock tree planning section,
+
+   o  Added checking for ICC_DP_CTP_ANCHOR_CEL before set_fp_clock_plan_options.
+
+*  icc_dp_scripts/prepare_block_dp.tcl has been updated with the following:
+
+   o  Now sets PNS_BLOCK_MODE to true for subblocks in icc_setup.tcl.
+
+
+

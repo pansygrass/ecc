@@ -1,0 +1,5 @@
+choose xa -hspice decoder.sp -c xa_options -o xa;
+use_spice -cell decoder;
+bus_format <%d>;
+d2a rf_time=10p rise_time=20p fall_time=20p delay=0 hiv=1.05 lov=0.0 node=*;
+a2d loth=0.3v hith=0.7v node=*;

@@ -1,0 +1,73 @@
+Initializing gui preferences from file  /users/bmzimmer/.synopsys_icc_prefs.tcl
+icc_shell> gui_start
+ + VUE INFO: Please click Verification->Hercules VUE in LayoutWindow menu
+to launch VUE.
+
+ + VUE ERROR: couldn't open socket: address already in use
+
+ + VUE INFO: Found a usable port: 2346
+
+Information: Loaded Hercules extension from /tools/designs/ee241/synopsys-32nm/hercules/virtuoso_integration (GUI-024)
+Information: Visibility is turned ON for cells and cell contents because the task is set to Block Implementation (GUI-026)
+icc_shell> source current-iccdp/icc_setup.tcl
+Error: could not open script file "make_generated_vars.tcl" (CMD-015)
+Error: could not open script file "common_setup.tcl" (CMD-015)
+Error: can't read "DESIGN_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "LIBRARY_DONT_USE_FILE": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "REPORTING_EFFORT": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "PNR_EFFORT": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "PNR_EFFORT": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "MAP_FILE": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "MW_POWER_NET": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "HIERARCHICAL_CELLS": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "DESIGN_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "DESIGN_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "DESIGN_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "DESIGN_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "DESIGN_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "DESIGN_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "DESIGN_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "DESIGN_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "DESIGN_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "ADDITIONAL_SEARCH_PATH": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "TARGET_LIBRARY_FILES": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "TARGET_LIBRARY_FILES": no such variable
+        Use error_info for more info. (CMD-013)
+Error: can't read "MIN_LIBRARY_FILES": no such variable
+        Use error_info for more info. (CMD-013)
+icc_shell> open_mw_lib /scratch/bmzimmer/decoder/build-rvt/icc-par/current-iccdp/decoder_LIB
+{decoder_LIB}
+icc_shell> open_mw_cel init_design_icc
+Preparing data for query................... 
+Warning: No valid link library found, please specify link_library. (IFS-008)
+Information: Opened "init_design_icc.CEL;1" from "/scratch/bmzimmer/decoder/build-rvt/icc-par/build-iccdp-2013-02-21_11-32/decoder_LIB" library. (MWUI-068)
+icc_shell> cut_row -all
+1
+icc_shell> add_row -direction horizontal -flip_first_row -tile_name unit
+Error: Required argument '-within' was not found (CMD-007)
+icc_shell> add_row -direction horizontal -flip_first_row -tile_name unit -within [get_attribute [get_core_area] bbox]
+Info: created 4 rows.
+1
+icc_shell> 
+
+Thank you...
+
