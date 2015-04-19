@@ -1,0 +1,115 @@
+Connection to IPC server failed.
+Starting IPC Server. (Port = 1925)
+IPC Server started successfully.
+No PseudoColor Visual avaiable, try TrueColor instead
+;; ;# Scheme
+                  Milkyway(TM)
+  Version G-2012.06-SP1 for RHEL64 -- Jul 13, 2012
+                                                  
+
+Linux 2.6.32-504.12.2.el6.centos.plus.x86_64 #1 SMP Thu Mar 12 18:39:03 UTC 2015 x86_64
+
+Host: hpse-15.CS.Berkeley.EDU (AMD.64)
+
+Copyright (C) 1991-2012 Synopsys, Inc. All rights reserved.
+Your use of this program is subject to the terms and conditions of
+a written license agreement between you, or your company, and Synopsys.
+Use the Tcl command "help about" for additional information about
+certain restrictions on your use of this software and its inputs and outputs.
+Install Path: /home/ff/ee241/tools/starrcxt/G-2012.06-SP3/amd64_starrc
+
+Loading /home/ff/ee241/tools/starrcxt/G-2012.06-SP3/amd64_starrc/etc/scheme/.avntrc
+#t
+ Info: loading setup file(s)
+Info: sourcing installation .synopsys_milkyway.tcl
+Info: sourced /home/ff/ee241/tools/starrcxt/G-2012.06-SP3/amd64_starrc/etc/auxx/tcllib/astro/milkyway.tbc
+;; configureWindow 0 "25x24+0+0"
+Initialization completed
+;; geOpenLib
+;; formButton "Open Library" "browse..."
+;; setFormField "Open Library" "Library Name" "SRAM1R1W1024x32.mw"
+;; formOK "Open Library"
+Open library "/home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srams/SRAM1R1W1024x32.mw" successfully.
+Change index of default color [magenta] from [51] to [55]
+Unable to set dimmed layer "10" line style to "none_@_Dim_@_"
+;; geOpenCell
+;; formButton "Open Cell" "browse..."
+;; setFormField "Open Cell" "Cell Name" "SRAM1R1W1024x32"
+;; formOK "Open Cell"
+Open cell SRAM1R1W1024x32.CEL;1 OK
+;; configureWindow 1 "826x704+250+100"
+Warning: The library '/home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srams/SRAM1R1W1024x32.mw' contains cells with older data model versions and must be updated with the convert_mw_lib command. (MW-308)
+;; configureWindow 1 "826x704+251+96"
+;; configureWindow 1 "826x704+255+64"
+;; configureWindow 1 "826x704+255+62"
+;; configureWindow 1 "826x704+255+58"
+;; geOpenLib
+Library already open.
+;; geOpenLib
+Library already open.
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "left"
+;; setView 1 "left"
+;; setView 1 "left"
+;; setView 1 "left"
+;; setView 1 "left"
+;; setView 1 "left"
+;; setView 1 "right"
+;; setView 1 "right"
+;; setView 1 "zoomin2"
+;; geLayerPanel
+;; lpnShowDataType 0
+;; lpnShowDataType 1
+;; lpnButton "allVisOn"
+;; lpnButton "allSelOn"
+;; lpnButton "apply"
+Unable to set dimmed layer "10" line style to "none_@_Dim_@_"
+;; lpnButton "redraw"
+;; lpnSelectLayer 5 1
+;; lpnSelectLayer 4 0
+;; lpnSelectLayer 4 0
+;; lpnButton "hide"
+;; panCenterTo 1
+;; addPoint 1 '(-0.399000 44.454000)
+;; addPoint 1 '(0.398000 54.870000)
+;; addPoint 1 '(6.229000 65.535000)
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomin2"
+;; setView 1 "zoomout4"
+;; setView 1 "zoomout4"
+;; setView 1 "zoomout4"
+;; setView 1 "zoomout4"
+;; setView 1 "zoomout4"
+;; setView 1 "next"
+;; panTo 1
+;; addPoint 1 '(5.598000 63.805000)
+;; addPoint 1 '(4.695000 64.196000)
+;; setView 1 "redraw"
+;; setView 1 "zoomout2"
+;; setView 1 "zoomout2"
+;; setView 1 "zoomout2"
+;; setView 1 "zoomout2"
+;; setView 1 "zoomout2"
+;; setView 1 "right"
+;; setView 1 "right"
+;; setView 1 "right"
+;; setView 1 "left"
+;; setView 1 "left"
+;; setView 1 "left"
+;; setView 1 "right"
+;; zoomTo 1

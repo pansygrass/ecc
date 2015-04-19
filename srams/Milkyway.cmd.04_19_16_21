@@ -1,0 +1,82 @@
+;# Scheme
+configureWindow 0 "25x24+0+0"
+geOpenLib
+formButton "Open Library" "browse..."
+setFormField "Open Library" "Library Name" "SRAM1R1W1024x32.mw"
+formOK "Open Library"
+geOpenCell
+formButton "Open Cell" "browse..."
+setFormField "Open Cell" "Cell Name" "SRAM1R1W1024x32"
+formOK "Open Cell"
+configureWindow 1 "826x704+250+100"
+configureWindow 1 "826x704+251+96"
+configureWindow 1 "826x704+255+64"
+configureWindow 1 "826x704+255+62"
+configureWindow 1 "826x704+255+58"
+geOpenLib
+geOpenLib
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "left"
+setView 1 "left"
+setView 1 "left"
+setView 1 "left"
+setView 1 "left"
+setView 1 "left"
+setView 1 "right"
+setView 1 "right"
+setView 1 "zoomin2"
+geLayerPanel
+lpnShowDataType 0
+lpnShowDataType 1
+lpnButton "allVisOn"
+lpnButton "allSelOn"
+lpnButton "apply"
+lpnButton "redraw"
+lpnSelectLayer 5 1
+lpnSelectLayer 4 0
+lpnSelectLayer 4 0
+lpnButton "hide"
+panCenterTo 1
+addPoint 1 '(-0.399000 44.454000)
+addPoint 1 '(0.398000 54.870000)
+addPoint 1 '(6.229000 65.535000)
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomin2"
+setView 1 "zoomout4"
+setView 1 "zoomout4"
+setView 1 "zoomout4"
+setView 1 "zoomout4"
+setView 1 "zoomout4"
+setView 1 "next"
+panTo 1
+addPoint 1 '(5.598000 63.805000)
+addPoint 1 '(4.695000 64.196000)
+setView 1 "redraw"
+setView 1 "zoomout2"
+setView 1 "zoomout2"
+setView 1 "zoomout2"
+setView 1 "zoomout2"
+setView 1 "zoomout2"
+setView 1 "right"
+setView 1 "right"
+setView 1 "right"
+setView 1 "left"
+setView 1 "left"
+setView 1 "left"
+setView 1 "right"
+zoomTo 1

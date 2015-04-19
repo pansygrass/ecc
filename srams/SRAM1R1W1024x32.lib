@@ -1,0 +1,276 @@
+library("SRAM1R1W1024x32") {
+  technology (cmos) ;
+  delay_model : "generic_cmos";
+  simulation  : true ;
+  nom_process : 1 ;
+  nom_temperature : 25;
+  nom_voltage : 1.05;
+  voltage_map(COREVDD1, 1.05);
+  voltage_map(COREGND1, 0.0);
+  operating_conditions("TYPICAL"){
+      process : 1;
+      temperature : 25;
+      voltage : 1.05;
+      tree_type : "balanced_tree";
+  }
+  default_operating_conditions : TYPICAL ;
+  capacitive_load_unit (1,pf) ;
+  voltage_unit : "1V" ;
+  current_unit : "1mA" ;
+  time_unit : "1ns" ;
+  pulling_resistance_unit : "1kohm"; 
+  leakage_power_unit : "1pW" ;        
+  library_features (report_delay_calculation);
+  default_leakage_power_density : 0.0;
+  default_fanout_load : 1;
+
+  default_max_transition :      0.05
+  default_inout_pin_cap :       0.001081
+  default_input_pin_cap :       0.001081
+  default_output_pin_cap :      0
+
+  slew_lower_threshold_pct_rise :  30.00
+  slew_upper_threshold_pct_rise :  70.00
+  slew_derate_from_library :  0.50
+  input_threshold_pct_fall :  50.00
+  output_threshold_pct_fall :  50.00
+  input_threshold_pct_rise :  50.00
+  output_threshold_pct_rise :  50.00
+  slew_lower_threshold_pct_fall :  30.00
+  slew_upper_threshold_pct_fall :  70.00
+  type( IO_bus_31_to_0 ) {
+    base_type : array ;
+    data_type : bit
+    bit_width : 32 ;
+    bit_from : 31 ;
+    bit_to : 0 ;
+    downto : true ;
+  }
+  type( A_bus_9_to_0 ) {
+    base_type : array ;
+    data_type : bit
+    bit_width : 10 ;
+    bit_from : 9 ;
+    bit_to : 0 ;
+    downto : true ;
+  }
+  type( BM_bus_3_to_0 ) {
+    base_type : array ;
+    data_type : bit
+    bit_width : 4 ;
+    bit_from : 3 ;
+    bit_to : 0 ;
+    downto : true ;
+  }
+
+  cell (SRAM1R1W1024x32) {
+    area :  18623.672;
+    cell_leakage_power : 546015000.000 ;
+
+    pg_pin(VDD) {
+        pg_type : primary_power;
+        voltage_name : COREVDD1;
+    }
+    pg_pin(VSS) {
+        pg_type : primary_ground;
+        voltage_name : COREGND1;
+    }
+
+    pin(CE1) {
+      direction : input;
+      clock : true;
+      capacitance : 0.010;
+      related_power_pin : VDD;
+      related_ground_pin : VSS;
+      
+      internal_power() {
+        when : "!CE1*!CSB1*!OEB1";
+        fall_power(scalar) {
+          values("1.6");
+        }
+        rise_power(scalar) {
+          values("1.6");
+        }
+      }
+    }
+
+    pin(OEB1) {
+      direction : input;
+      capacitance : 0.010;
+      related_power_pin : VDD;
+      related_ground_pin : VSS;
+      timing () {
+        timing_type : setup_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE1";
+      }
+      timing () {
+        timing_type : hold_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE1";
+      }
+
+    }
+
+    pin(CSB1) {
+      direction : input;
+      capacitance : 0.010;
+      related_power_pin : VDD;
+      related_ground_pin : VSS;
+      timing () {
+        timing_type : setup_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE1";
+      }
+      timing () {
+        timing_type : hold_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE1";
+      }
+
+    }
+
+    bus(A1) {
+      bus_type : A_bus_9_to_0 ;
+      direction : input;
+      capacitance : 0.001;
+      related_power_pin : VDD;
+      related_ground_pin : VSS;
+      timing () {
+        timing_type : setup_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE1";
+      }
+      timing () {
+        timing_type : hold_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE1";
+      }
+
+    }
+
+    bus(O1) {
+      bus_type : IO_bus_31_to_0 ;
+      direction : output;
+      capacitance : 0.001;
+      related_power_pin : VDD;
+      related_ground_pin : VSS;
+      timing () {
+        timing_type : "rising_edge";
+        related_pin : "CE1";
+        intrinsic_rise : 0.380 ;
+        rise_resistance : 0.01 ;
+        intrinsic_fall : 0.380 ;
+        fall_resistance : 0.01 ;
+      }
+    }
+
+    pin(CE2) {
+      direction : input;
+      clock : true;
+      capacitance : 0.010;
+      related_power_pin : VDD;
+      related_ground_pin : VSS;
+      
+      internal_power() {
+        when : "!CE2*!CSB2*!WEB2";
+        fall_power(scalar) {
+          values("0.9");
+        }
+        rise_power(scalar) {
+          values("0.9");
+        }
+      }
+    }
+
+    pin(WEB2) {
+      direction : input;
+      capacitance : 0.010;
+      related_power_pin : VDD;
+      related_ground_pin : VSS;
+      timing () {
+        timing_type : setup_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE2";
+      }
+      timing () {
+        timing_type : hold_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE2";
+      }
+
+    }
+
+    pin(CSB2) {
+      direction : input;
+      capacitance : 0.010;
+      related_power_pin : VDD;
+      related_ground_pin : VSS;
+      timing () {
+        timing_type : setup_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE2";
+      }
+      timing () {
+        timing_type : hold_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE2";
+      }
+
+    }
+
+    bus(A2) {
+      bus_type : A_bus_9_to_0 ;
+      direction : input;
+      capacitance : 0.001;
+      related_power_pin : VDD;
+      related_ground_pin : VSS;
+      timing () {
+        timing_type : setup_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE2";
+      }
+      timing () {
+        timing_type : hold_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE2";
+      }
+
+    }
+
+    bus(I2) {
+      bus_type : IO_bus_31_to_0 ;
+      direction : input;
+      capacitance : 0.001;
+      related_power_pin : VDD;
+      related_ground_pin : VSS;
+      timing () {
+        timing_type : setup_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE2";
+      }
+      timing () {
+        timing_type : hold_rising;
+        intrinsic_rise : 0.010;
+        intrinsic_fall : 0.010;
+        related_pin : "CE2";
+      }
+
+    }
+
+  }
+}
+
