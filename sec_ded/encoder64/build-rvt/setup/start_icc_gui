@@ -1,0 +1,2 @@
+#! /bin/bash
+icc_shell -64bit -x "source icc_setup.tcl; open_mw_lib _DESIGN_NAME__LIB; open_mw_cel change_names_icc; gui_start"

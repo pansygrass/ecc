@@ -1,0 +1,6 @@
+9
+1673336831
+simv.daidir/decoder_topwrapper.v 
++v2k -realport -full64 -vlib simv.daidir/spicelib simv.daidir/decoder_topwrapper.v -l simv.daidir/decoder_topwrapper.v.log -q
+   /tools/synopsys/vcs/G-2012.09/amd64/bin/vcs1 -Mcc=gcc -Mcplusplus=g++ -Masflags= -Mcfl=' -pipe -O -I/tools/synopsys/vcs/G-2012.09/include ' -Mldflags=" " -Mout=simv -Mamsrun="" -Mvcsaceobjs="" -Mobjects=" " -Msaverestoreobj= -Mcrt0="" -Mcrtn="" -Mcsrc="" -Msyslibs="-ldl "
+-Xvlogan=0x1 +v2k -realport -full64  -outdir=simv.daidir/spicelib   -l simv.daidir/decoder_topwrapper.v.log -q    

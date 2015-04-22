@@ -1,0 +1,2 @@
+#! /bin/bash
+dc_shell-xg-t -64bit -x "source dc_setup.tcl; read_file -format ddc results/_DESIGN_NAME_.mapped.ddc; gui_start"
