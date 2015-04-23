@@ -1,0 +1,214 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : enc_top
+Version: J-2014.09-SP3
+Date   : Tue Apr 21 21:48:00 2015
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
+Wire Load Model Mode: Inactive.
+
+  Startpoint: O1_reg_12_ (rising edge-triggered flip-flop)
+  Endpoint: O1[12] (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  O1_reg_12_/CLK (DFFX1_RVT)                       0.0380    0.0000     0.0000 r
+  O1_reg_12_/Q (DFFX1_RVT)                         0.0188    0.0945     0.0945 f
+  n41170 (net)                   1       1.0264              0.0000     0.0945 f
+  U12131/A (NBUFFX4_RVT)                           0.0188    0.0000 *   0.0945 f
+  U12131/Y (NBUFFX4_RVT)                           0.0428    0.0495     0.1440 f
+  O1[12] (net)                   1      24.4239              0.0000     0.1440 f
+  O1[12] (out)                                     0.0428    0.0042 *   0.1482 f
+  data arrival time                                                     0.1482
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: O1_reg_13_ (rising edge-triggered flip-flop)
+  Endpoint: O1[13] (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  O1_reg_13_/CLK (DFFX1_RVT)                       0.0380    0.0000     0.0000 r
+  O1_reg_13_/Q (DFFX1_RVT)                         0.0187    0.0943     0.0943 f
+  n41168 (net)                   1       0.9960              0.0000     0.0943 f
+  U12160/A (NBUFFX4_RVT)                           0.0187    0.0000 *   0.0943 f
+  U12160/Y (NBUFFX4_RVT)                           0.0427    0.0494     0.1437 f
+  O1[13] (net)                   1      24.3428              0.0000     0.1437 f
+  O1[13] (out)                                     0.0427    0.0042 *   0.1479 f
+  data arrival time                                                     0.1479
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: O1_reg_10_ (rising edge-triggered flip-flop)
+  Endpoint: O1[10] (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  O1_reg_10_/CLK (DFFX1_RVT)                       0.0383    0.0000     0.0000 r
+  O1_reg_10_/Q (DFFX1_RVT)                         0.0186    0.0943     0.0943 f
+  n41165 (net)                   1       0.9770              0.0000     0.0943 f
+  U12087/A (NBUFFX4_RVT)                           0.0186    0.0000 *   0.0943 f
+  U12087/Y (NBUFFX4_RVT)                           0.0415    0.0486     0.1429 f
+  O1[10] (net)                   1      23.5548              0.0000     0.1429 f
+  O1[10] (out)                                     0.0415    0.0039 *   0.1468 f
+  data arrival time                                                     0.1468
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: O1_reg_8_ (rising edge-triggered flip-flop)
+  Endpoint: O1[8] (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  O1_reg_8_/CLK (DFFX1_RVT)                        0.0382    0.0000     0.0000 r
+  O1_reg_8_/Q (DFFX1_RVT)                          0.0187    0.0944     0.0944 f
+  n41162 (net)                   1       1.0116              0.0000     0.0944 f
+  U12121/A (NBUFFX4_RVT)                           0.0187    0.0000 *   0.0944 f
+  U12121/Y (NBUFFX4_RVT)                           0.0410    0.0483     0.1428 f
+  O1[8] (net)                    1      23.1758              0.0000     0.1428 f
+  O1[8] (out)                                      0.0410    0.0038 *   0.1465 f
+  data arrival time                                                     0.1465
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: O1_reg_11_ (rising edge-triggered flip-flop)
+  Endpoint: O1[11] (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  O1_reg_11_/CLK (DFFX1_RVT)                       0.0379    0.0000     0.0000 r
+  O1_reg_11_/Q (DFFX1_RVT)                         0.0187    0.0943     0.0943 f
+  n41160 (net)                   1       0.9929              0.0000     0.0943 f
+  U12035/A (NBUFFX4_RVT)                           0.0187    0.0000 *   0.0943 f
+  U12035/Y (NBUFFX4_RVT)                           0.0406    0.0480     0.1423 f
+  O1[11] (net)                   1      22.9147              0.0000     0.1423 f
+  O1[11] (out)                                     0.0406    0.0036 *   0.1460 f
+  data arrival time                                                     0.1460
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: O1_reg_9_ (rising edge-triggered flip-flop)
+  Endpoint: O1[9] (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  O1_reg_9_/CLK (DFFX1_RVT)                        0.0381    0.0000     0.0000 r
+  O1_reg_9_/Q (DFFX1_RVT)                          0.0188    0.0945     0.0945 f
+  n41158 (net)                   1       1.0274              0.0000     0.0945 f
+  U12086/A (NBUFFX4_RVT)                           0.0188    0.0000 *   0.0945 f
+  U12086/Y (NBUFFX4_RVT)                           0.0400    0.0477     0.1422 f
+  O1[9] (net)                    1      22.4597              0.0000     0.1422 f
+  O1[9] (out)                                      0.0400    0.0035 *   0.1457 f
+  data arrival time                                                     0.1457
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: O1_reg_7_ (rising edge-triggered flip-flop)
+  Endpoint: O1[7] (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  O1_reg_7_/CLK (DFFX1_RVT)                        0.0383    0.0000     0.0000 r
+  O1_reg_7_/Q (DFFX1_RVT)                          0.0188    0.0945     0.0945 f
+  n41156 (net)                   1       1.0311              0.0000     0.0945 f
+  U12034/A (NBUFFX4_RVT)                           0.0188    0.0000 *   0.0945 f
+  U12034/Y (NBUFFX4_RVT)                           0.0397    0.0475     0.1420 f
+  O1[7] (net)                    1      22.2223              0.0000     0.1420 f
+  O1[7] (out)                                      0.0397    0.0034 *   0.1454 f
+  data arrival time                                                     0.1454
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: O1_reg_12_ (rising edge-triggered flip-flop)
+  Endpoint: O1[12] (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  O1_reg_12_/CLK (DFFX1_RVT)                       0.0380    0.0000     0.0000 r
+  O1_reg_12_/Q (DFFX1_RVT)                         0.0175    0.0893     0.0893 r
+  n41170 (net)                   1       1.0322              0.0000     0.0893 r
+  U12131/A (NBUFFX4_RVT)                           0.0175    0.0000 *   0.0893 r
+  U12131/Y (NBUFFX4_RVT)                           0.0410    0.0488     0.1381 r
+  O1[12] (net)                   1      24.4239              0.0000     0.1381 r
+  O1[12] (out)                                     0.0410    0.0042 *   0.1423 r
+  data arrival time                                                     0.1423
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: O1_reg_13_ (rising edge-triggered flip-flop)
+  Endpoint: O1[13] (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  O1_reg_13_/CLK (DFFX1_RVT)                       0.0380    0.0000     0.0000 r
+  O1_reg_13_/Q (DFFX1_RVT)                         0.0174    0.0892     0.0892 r
+  n41168 (net)                   1       1.0017              0.0000     0.0892 r
+  U12160/A (NBUFFX4_RVT)                           0.0174    0.0000 *   0.0892 r
+  U12160/Y (NBUFFX4_RVT)                           0.0409    0.0487     0.1379 r
+  O1[13] (net)                   1      24.3428              0.0000     0.1379 r
+  O1[13] (out)                                     0.0409    0.0042 *   0.1421 r
+  data arrival time                                                     0.1421
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: O1_reg_10_ (rising edge-triggered flip-flop)
+  Endpoint: O1[10] (output port clocked by ideal_clock1)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  O1_reg_10_/CLK (DFFX1_RVT)                       0.0383    0.0000     0.0000 r
+  O1_reg_10_/Q (DFFX1_RVT)                         0.0173    0.0891     0.0891 r
+  n41165 (net)                   1       0.9828              0.0000     0.0891 r
+  U12087/A (NBUFFX4_RVT)                           0.0173    0.0000 *   0.0891 r
+  U12087/Y (NBUFFX4_RVT)                           0.0400    0.0480     0.1372 r
+  O1[10] (net)                   1      23.5548              0.0000     0.1372 r
+  O1[10] (out)                                     0.0400    0.0039 *   0.1411 r
+  data arrival time                                                     0.1411
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

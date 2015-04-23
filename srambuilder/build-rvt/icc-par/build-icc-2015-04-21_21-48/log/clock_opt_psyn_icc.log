@@ -1,0 +1,429 @@
+
+                          IC Compiler (TM)
+                         IC Compiler-PC (TM)
+                         IC Compiler-XP (TM)
+                         IC Compiler-DP (TM)
+                         IC Compiler-AG (TM)
+
+          Version J-2014.09-SP3 for RHEL64 -- Jan 13, 2015
+
+Zroute is the default router for ICC, ICC-PC, ICC-DP and ICC-AG in IC Compiler.
+         Classic router will continue to be fully supported.
+
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##########################################################################################
+# Version: D-2010.03-SP2 (July 6, 2010)
+# Copyright (C) 2007-2010 Synopsys, Inc. All rights reserved.
+##########################################################################################
+source icc_setup.tcl
+
+------------------- Internal Reference Library Settings -----------------
+
+Library    /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/enc_top_LIB
+  Reference    /home/ff/ee241/stdcells/synopsys-32nm/vendor/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
+
+
+------------------- Control File Reference Library Settings -----------
+
+Library    /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/enc_top_LIB
+  Reference    /home/ff/ee241/stdcells/synopsys-32nm/vendor/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
+-------------------------------------------------------------------------
+
+###############################################
+## clock_opt_psyn_icc: Post CTS optimization ##
+###############################################
+open_mw_lib $MW_DESIGN_LIBRARY
+{enc_top_LIB}
+redirect /dev/null "remove_mw_cel -version_kept 0 ${ICC_CLOCK_OPT_PSYN_CEL}"
+copy_mw_cel -from $ICC_CLOCK_OPT_CTS_CEL -to $ICC_CLOCK_OPT_PSYN_CEL
+1
+open_mw_cel $ICC_CLOCK_OPT_PSYN_CEL
+Warning: Unit conflict found: Milkyway technology file resistance unit is kOhm; main library resistance unit is MOhm. (IFS-007)
+Information: Opened "clock_opt_psyn_icc.CEL;1" from "/home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/enc_top_LIB" library. (MWUI-068)
+{clock_opt_psyn_icc}
+## Optimization Common Session Options - set in all sessions
+source common_optimization_settings_icc.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/common_optimization_settings_icc.tcl
+Loading db file '/home/ff/ee241/stdcells/synopsys-32nm/multi_vt/db/saed32rvt_tt1p05v25c.db'
+Loading db file '/home/ff/ee241/tools/icc/libraries/syn/gtech.db'
+Information: linking reference library : /home/ff/ee241/stdcells/synopsys-32nm/vendor/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m. (PSYN-878)
+Information: Loading local_link_library attribute {saed32rvt_tt1p05v25c.db}. (MWDC-290)
+
+  Linking design 'enc_top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (1026 designs)            clock_opt_psyn_icc.CEL, etc
+  saed32rvt_tt1p05v25c (library) /home/ff/ee241/stdcells/synopsys-32nm/multi_vt/db/saed32rvt_tt1p05v25c.db
+
+source common_placement_settings_icc.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/common_placement_settings_icc.tcl
+Warning: The design has already been assigned layer constraints and we will overwrite the constraints. (RT-064)
+Warning: The design has already been assigned layer constraints and we will overwrite the constraints. (RT-064)
+## Source CTS Options
+source common_cts_settings_icc.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/common_cts_settings_icc.tcl
+## Source Post CTS Options
+source common_post_cts_timing_settings.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/common_post_cts_timing_settings.tcl
+set_app_var compile_instance_name_prefix icc_clock
+icc_clock
+if { [check_error -verbose] != 0} { echo "SCRIPT-Error, flagging ..." }
+if {$LEAKAGE_POWER} {
+  # The following is not needed if already set in place_opt_icc step:
+  # set_multi_vth_constraint -reset
+
+  ############################################################
+  # %LVT leakage optimization flow (edit before using it)
+  ############################################################
+  # For limiting the number of low Vth cells in the design, set a multithreshold
+  # voltage constraint. This is a faster flow than the default leakage
+  # optimization flow, and does not use the leakage power values in the library.
+
+  # Edit the following to set the threshold voltage groups in the libraries.
+  # Please use the same settings as used in place_opt_icc step.
+  # set_attribute <my_hvt_lib> default_threshold_voltage_group HVT -type string
+  # set_attribute <my_lvt_lib> default_threshold_voltage_group LVT -type string
+
+  # If pre-existing, the <percent value> of set_multi_vth_constraint will be inherited
+  # from previous ICC step where it was last set.
+  # If needed, edit the following to set a differnt <percent value>
+  # set_multi_vth_constraint -lvth_groups { LVT } -lvth_percentage <percent value>
+}
+extract_rc
+Information: The design has horizontal rows, and Y-symmetry has been used for sites. (MWDC-217)
+Derived Core Area : (1000 1304) (724976 723608) is different from CEL Core Area (1000 1000) (724976 724976).
+Floorplan loading succeeded.
+
+  Loading design 'enc_top'
+
+
+Warning: Port 'OEB1' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'clk' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+
+
+Information: Library Manufacturing Grid(GridResolution) : 1
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Warning: Mismatch in the main library and the Milkyway library resistance units. In the main library it is 1000.000 kohm and in the Milkyway design library it is 1.000 kohm. Check and correct the resistance units in the .tf and .db files. (PSYN-476)
+Information: Capacitance Unit from Milkyway design library: 'ff' 
+Information: Design Library and main library capacitance units are matched - 0.001 pf. 
+Information: None of the nets in the design are routed. Estimation of all the nets will be performed. (RCEX-203)
+Information: Start rc update...
+Information: Layer M1 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M6 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M7 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M8 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M9 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer MRDL is ignored for resistance and capacitance computation. (RCEX-019)
+
+TLU+ File = /home/ff/ee241/stdcells/synopsys-32nm/multi_vt/tluplus/max.tluplus
+TLU+ File = /home/ff/ee241/stdcells/synopsys-32nm/multi_vt/tluplus/min.tluplus
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: End rc update.
+1
+if { [check_error -verbose] != 0} { echo "SCRIPT-Error, flagging ..." }
+if {$ICC_ENABLE_CHECKPOINT} {
+echo "SCRIPT-Info : Please ensure there's enough disk space before enabling the set_checkpoint_strategy feature."
+set_checkpoint_strategy -enable -overwrite
+# The -overwrite option is used by default. Remove it if needed.
+}
+# YUNSUP: changed for fast p&r
+set clock_opt_psyn_cmd "clock_opt -no_clock_route -only_psyn"
+clock_opt -no_clock_route -only_psyn
+if {$DFT} {lappend clock_opt_psyn_cmd -optimize_dft}
+if {$LEAKAGE_POWER || $DYNAMIC_POWER} {lappend clock_opt_psyn_cmd -power}
+clock_opt -no_clock_route -only_psyn -power
+echo $clock_opt_psyn_cmd
+clock_opt -no_clock_route -only_psyn -power
+eval $clock_opt_psyn_cmd
+Warning: Starting from the 2011.09-SP4 release, clock_opt will NOT perform congestion-driven placement by default. (PSYN-1111)
+
+The options for clock_opt:
+--------------------------
+COPT:  Clock Tree Synthesis                 : No
+COPT:  Post CTS Optimization                : Yes
+COPT:  Concurrent Clock/Data Optimization   : No
+COPT:  Route Clock Nets                     : No
+COPT:  Update Clock Latency                 : No
+COPT:  Optimize Hold for All Clocks         : No
+COPT:  Optimize Hold Timing Only            : No
+COPT:  Optimize DFT                         : No
+COPT:  Area Recovery                        : No
+COPT:  Size Only                            : No
+COPT:  In Place Size Only                   : No
+COPT:  Congestion removal                   : No
+COPT:  Optimize Power                       : Yes
+COPT:  Optimize Power Mode                  : Leakage
+---------------------------------------------------
+
+Executing ICC clock_opt...
+medium
+*
+Performing optimization...
+
+  Loading design 'enc_top'
+Information: The library cell 'PMT3_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT2_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT1_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT3_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT2_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT1_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+
+Warning: Port 'OEB1' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'clk' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+
+
+Information: Library Manufacturing Grid(GridResolution) : 1
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Warning: Mismatch in the main library and the Milkyway library resistance units. In the main library it is 1000.000 kohm and in the Milkyway design library it is 1.000 kohm. Check and correct the resistance units in the .tf and .db files. (PSYN-476)
+Information: Capacitance Unit from Milkyway design library: 'ff' 
+Information: Design Library and main library capacitance units are matched - 0.001 pf. 
+Information: The target library  has 1 Vth group. VT classification is based on area-leakage and the estimated accuracy is above 80%. (ROPT-028)
+Information: Layer M1 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M6 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M7 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M8 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M9 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer MRDL is ignored for resistance and capacitance computation. (RCEX-019)
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  Nets with DRC Violations: 4839
+  Total moveable cell area: 314497.1
+  Total fixed cell area: 0.0
+  Total physical cell area: 314497.1
+  Core area: (1000 1000 724976 724976)
+
+
+                  Incremental high fanout optimization starts
+================================================================
+
+ Collecting Buffer Trees ... Found 0
+
+                  Incremental high fanout optimization completes
+================================================================
+
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  Nets with DRC Violations: 4839
+  Total moveable cell area: 314497.1
+  Total fixed cell area: 0.0
+  Total physical cell area: 314497.1
+  Core area: (1000 1000 724976 724976)
+
+
+  No hold constraints
+
+
+  Timing and DRC Optimization (Stage 1)
+  --------------------------------------
+
+
+
+  Beginning Timing Optimizations
+  ------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:37  314497.1      0.00       0.0   64189.7                           59286966272.0000      0.00  
+    0:00:41  314821.6      0.00       0.0   61072.3                           59564138496.0000      0.00  
+    0:00:43  315126.1      0.00       0.0   58536.4                           59815550976.0000      0.00  
+    0:00:45  315435.7      0.00       0.0   56618.3                           60075421696.0000      0.00  
+    0:00:47  315717.5      0.00       0.0   54969.3                           60313296896.0000      0.00  
+    0:00:49  315897.7      0.00       0.0   54532.3                           60350148608.0000      0.00  
+    0:00:49  316820.2      0.00       0.0   53146.0                           60437868544.0000      0.00  
+    0:00:50  317449.8      0.00       0.0   51856.3                           60527394816.0000      0.00  
+    0:00:50  317674.9      0.00       0.0   50777.6                           60685901824.0000      0.00  
+    0:00:52  318000.7      0.00       0.0   48764.3                           60913655808.0000      0.00  
+    0:00:54  318457.2      0.00       0.0   46214.7                           61316710400.0000      0.00  
+    0:00:55  318976.4      0.00       0.0   44065.0                           61784784896.0000      0.00  
+    0:00:55  319507.6      0.00       0.0   42272.4                           62261125120.0000      0.00  
+    0:00:56  320056.5      0.00       0.0   39815.7                           62756003840.0000      0.00  
+    0:00:57  320600.9      0.00       0.0   37281.8                           63246757888.0000      0.00  
+    0:00:58  321060.9      0.00       0.0   35012.7                           63650451456.0000      0.00  
+    0:01:00  321496.7      0.00       0.0   32406.5                           64035549184.0000      0.00  
+    0:01:01  321976.8      0.00       0.0   29732.6                           64444260352.0000      0.00  
+    0:01:02  322512.3      0.00       0.0   26968.3                           64925749248.0000      0.00  
+    0:01:03  323044.5      0.00       0.0   24358.1                           65404547072.0000      0.00  
+    0:01:04  323435.6      0.00       0.0   21822.0                           65748701184.0000      0.00  
+    0:01:05  323979.5      0.00       0.0   19132.6                           66238595072.0000      0.00  
+    0:01:06  324071.5      0.00       0.0   18635.7                           66320494592.0000      0.00  
+    0:01:06  324080.6      0.00       0.0   18548.2                           66329985024.0000      0.00  
+    0:01:09  324219.9      0.00       0.0   17505.8                           66386624512.0000      0.00  
+    0:01:10  324318.8      0.00       0.0   17081.4                           66424705024.0000      0.00  
+    0:01:12  324395.8      0.00       0.0   16914.2                           66459234304.0000      0.00  
+    0:01:18  324498.4      0.00       0.0   16694.3                           66481078272.0000      0.00  
+    0:01:20  324562.0      0.00       0.0   16562.2                           66495209472.0000      0.00  
+    0:01:21  324658.8      0.00       0.0   16485.3                           66516107264.0000      0.00  
+    0:01:21  324703.5      0.00       0.0   16389.5                           66527404032.0000      0.00  
+    0:01:21  324748.3      0.00       0.0   16247.3                           66538700800.0000      0.00  
+    0:01:21  324793.0      0.00       0.0   16093.3                           66550001664.0000      0.00  
+    0:01:21  324838.2      0.00       0.0   15916.1                           66561822720.0000      0.00  
+    0:01:22  324892.1      0.00       0.0   15727.3                           66576232448.0000      0.00  
+    0:01:22  324961.2      0.00       0.0   15336.7                           66600730624.0000      0.00  
+    0:01:23  325022.7      0.00       0.0   15021.5                           66608525312.0000      0.00  
+    0:01:24  325108.9      0.00       0.0   14752.2                           66637336576.0000      0.00  
+    0:01:24  325186.4      0.00       0.0   14525.3                           66669068288.0000      0.00  
+    0:01:25  325250.7      0.00       0.0   14198.2                           66695540736.0000      0.00  
+    0:01:25  325295.2      0.00       0.0   14053.3                           66699378688.0000      0.00  
+    0:01:25  325349.1      0.00       0.0   13769.2                           66716487680.0000      0.00  
+    0:01:26  325458.3      0.00       0.0   13503.2                           66767757312.0000      0.00  
+    0:01:27  325534.8      0.00       0.0   13166.6                           66806177792.0000      0.00  
+    0:01:27  325597.9      0.00       0.0   12741.5                           66835103744.0000      0.00  
+    0:01:28  325655.6      0.00       0.0   12476.1                           66856624128.0000      0.00  
+    0:01:28  325661.7      0.00       0.0   12373.9                           66858221568.0000      0.00  
+    0:01:28  325694.2      0.00       0.0   12232.4                           66865422336.0000      0.00  
+    0:01:28  325763.3      0.00       0.0   12060.2                           66892017664.0000      0.00  
+    0:01:29  325832.9      0.00       0.0   11798.2                           66915434496.0000      0.00  
+    0:01:29  325908.9      0.00       0.0   11353.5                           66950168576.0000      0.00  
+    0:01:30  326005.0      0.00       0.0   11044.4                           66988859392.0000      0.00  
+    0:01:30  326068.0      0.00       0.0   10857.4                           67001540608.0000      0.00  
+    0:01:30  326149.1      0.00       0.0   10614.1                           67036848128.0000      0.00  
+    0:01:31  326228.4      0.00       0.0   10259.1                           67078127616.0000      0.00  
+    0:01:31  326294.0      0.00       0.0   10061.4                           67110920192.0000      0.00  
+    0:01:32  326384.7      0.00       0.0    9745.6                           67164921856.0000      0.00  
+    0:01:32  326444.9      0.00       0.0    9539.3                           67178717184.0000      0.00  
+    0:01:32  326533.9      0.00       0.0    9146.8                           67226046464.0000      0.00  
+    0:01:33  326596.9      0.00       0.0    8907.2                           67252551680.0000      0.00  
+    0:01:33  326650.3      0.00       0.0    8711.1                           67270725632.0000      0.00  
+    0:01:33  326724.0      0.00       0.0    8490.6                           67300024320.0000      0.00  
+    0:01:34  326790.6      0.00       0.0    8233.2                           67329597440.0000      0.00  
+    0:01:34  326851.8      0.00       0.0    7981.3                           67356434432.0000      0.00  
+    0:01:35  326920.7      0.00       0.0    7727.9                           67389550592.0000      0.00  
+    0:01:35  326996.4      0.00       0.0    7420.3                           67422318592.0000      0.00  
+    0:01:35  327081.0      0.00       0.0    7185.1                           67448975360.0000      0.00  
+    0:01:36  327156.3      0.00       0.0    6925.3                           67482832896.0000      0.00  
+    0:01:36  327222.1      0.00       0.0    6690.2                           67513405440.0000      0.00  
+    0:01:37  327298.3      0.00       0.0    6419.1                           67534434304.0000      0.00  
+    0:01:37  327364.4      0.00       0.0    6281.9                           67554549760.0000      0.00  
+    0:01:37  327426.9      0.00       0.0    6172.8                           67568664576.0000      0.00  
+    0:01:37  327488.4      0.00       0.0    6134.1                           67583631360.0000      0.00  
+    0:01:37  327549.9      0.00       0.0    6059.4                           67599564800.0000      0.00  
+    0:01:38  327612.0      0.00       0.0    5960.8                           67616022528.0000      0.00  
+    0:01:38  327675.0      0.00       0.0    5867.4                           67632570368.0000      0.00  
+    0:01:38  327736.5      0.00       0.0    5802.6                           67648503808.0000      0.00  
+    0:01:38  327798.0      0.00       0.0    5738.8                           67664437248.0000      0.00  
+    0:01:38  327870.7      0.00       0.0    5380.3                           67690958848.0000      0.00  
+    0:01:38  327939.8      0.00       0.0    5110.9                           67714293760.0000      0.00  
+    0:01:38  328008.7      0.00       0.0    4877.5                           67737112576.0000      0.00  
+    0:01:38  328071.7      0.00       0.0    4771.5                           67754627072.0000      0.00  
+    0:01:39  328152.0      0.00       0.0    4290.1                           67788550144.0000      0.00  
+    0:01:39  328219.6      0.00       0.0    4016.9                           67810078720.0000      0.00  
+    0:01:39  328285.2      0.00       0.0    3799.1                           67830857728.0000      0.00  
+    0:01:39  328369.3      0.00       0.0    3280.2                           67866447872.0000      0.00  
+    0:01:39  328444.3      0.00       0.0    2512.0                           67911495680.0000      0.00  
+
+
+  Beginning Phase 1 Design Rule Fixing  (max_transition)  (max_capacitance)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:39  328444.3      0.00       0.0    2512.0                           67911495680.0000      0.00  
+    0:01:44  328603.1      0.00       0.0    1868.1                           68001218560.0000      0.00  
+    0:01:47  329321.8      0.00       0.0     239.9                           68625526784.0000      0.00  
+    0:01:50  329450.2      0.00       0.0      78.8                           68660174848.0000      0.00  
+    0:01:50  329460.6      0.00       0.0      75.2                           68669485056.0000      0.00  
+
+
+  Beginning Phase 2 Design Rule Fixing  (max_transition)  (max_capacitance)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:50  329460.6      0.00       0.0      75.2                           68669485056.0000      0.00  
+    0:01:51  329454.0      0.00       0.0      66.8                           68669886464.0000      0.00  
+
+
+  Beginning Leakage Power Optimization
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:51  329454.0      0.00       0.0      66.8                           68669886464.0000      0.00  
+    0:01:51  329454.0      0.00       0.0      66.8                           68669886464.0000      0.00  
+    0:02:17  328086.2      0.00       0.0      66.7                           66961420288.0000      0.00  
+    0:02:17  328086.2      0.00       0.0      66.7                           66961420288.0000      0.00  
+    0:02:17  328086.2      0.00       0.0      66.7                           66961420288.0000      0.00  
+Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
+Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
+Warning: Warning: Target library does not have any constant lib_cells so tool cannot replace virtual constants.  (OPT-223)
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+
+  Placement Optimization (Stage 1)
+  -----------------------------------------------------
+
+Information: Running stand-alone coarse placer in a separate process using temp directory '/tmp'. (PSYN-605)
+rpconn: child final code = 0x0
+Severe Error: Fatal error: Placer did not complete. (PSYN-375)
+
+Information: Analyzing channel congestion ... 
+Information: Channel congestion analysis detected 0 channels, edges and corners
+
+
+  Placement Optimization Complete
+  -------------------------------
+
+
+  Timing and DRC Optimization (Stage 2)
+  --------------------------------------
+
+Error: psynopt has abnormally terminated.  (OPT-100)
+Error: A Severe error has occurred. To ensure that the script does not continue, the value of sh_continue_on_error has been overridden to be false. Your script is being interrupted. To see the Tcl call stack for the part of your script which generated the Severe error use the error_info command.   (CMD-103)
+Error: Severe error encountered
+	Use error_info for more info. (CMD-013)
+Information: script '/home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/clock_opt_psyn_icc.tcl'
+	stopped at line 71 due to error. (CMD-081)
+icc_shell> exit
+
+Thank you...
+Exit IC Compiler!

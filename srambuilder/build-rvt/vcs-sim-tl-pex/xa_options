@@ -1,0 +1,3 @@
+set_waveform -format vpd -file merge
+probe_waveform_voltage *
+probe_waveform_current decoder_tb.dut0.Vvdd

@@ -1,0 +1,307 @@
+
+                          IC Compiler (TM)
+                         IC Compiler-PC (TM)
+                         IC Compiler-XP (TM)
+                         IC Compiler-DP (TM)
+                         IC Compiler-AG (TM)
+
+          Version J-2014.09-SP3 for RHEL64 -- Jan 13, 2015
+
+Zroute is the default router for ICC, ICC-PC, ICC-DP and ICC-AG in IC Compiler.
+         Classic router will continue to be fully supported.
+
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##########################################################################################
+# Version: D-2010.03-SP2 (July 6, 2010)
+# Copyright (C) 2007-2010 Synopsys, Inc. All rights reserved.
+##########################################################################################
+source icc_setup.tcl
+
+------------------- Internal Reference Library Settings -----------------
+
+Library    /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/enc_top_LIB
+  Reference    /home/ff/ee241/stdcells/synopsys-32nm/vendor/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
+
+
+------------------- Control File Reference Library Settings -----------
+
+Library    /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/enc_top_LIB
+  Reference    /home/ff/ee241/stdcells/synopsys-32nm/vendor/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
+-------------------------------------------------------------------------
+
+##########################################################################################
+## place_opt_icc: Placement and Placement Optimizations
+##########################################################################################
+open_mw_lib $MW_DESIGN_LIBRARY
+{enc_top_LIB}
+redirect /dev/null "remove_mw_cel -version_kept 0 ${ICC_PLACE_OPT_CEL}"
+copy_mw_cel -from $ICC_FLOORPLAN_CEL -to $ICC_PLACE_OPT_CEL
+1
+open_mw_cel $ICC_PLACE_OPT_CEL
+Warning: Unit conflict found: Milkyway technology file resistance unit is kOhm; main library resistance unit is MOhm. (IFS-007)
+Information: Opened "place_opt_icc.CEL;1" from "/home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/enc_top_LIB" library. (MWUI-068)
+{place_opt_icc}
+## Optimization Common Session options - set in all sessions
+source common_optimization_settings_icc.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/common_optimization_settings_icc.tcl
+Loading db file '/home/ff/ee241/stdcells/synopsys-32nm/multi_vt/db/saed32rvt_tt1p05v25c.db'
+Loading db file '/home/ff/ee241/tools/icc/libraries/syn/gtech.db'
+Information: linking reference library : /home/ff/ee241/stdcells/synopsys-32nm/vendor/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m. (PSYN-878)
+Information: Loading local_link_library attribute {saed32rvt_tt1p05v25c.db}. (MWDC-290)
+
+  Linking design 'enc_top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (1026 designs)            place_opt_icc.CEL, etc
+  saed32rvt_tt1p05v25c (library) /home/ff/ee241/stdcells/synopsys-32nm/multi_vt/db/saed32rvt_tt1p05v25c.db
+
+source common_placement_settings_icc.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/common_placement_settings_icc.tcl
+Warning: The design has already been assigned layer constraints and we will overwrite the constraints. (RT-064)
+Warning: The design has already been assigned layer constraints and we will overwrite the constraints. (RT-064)
+## Source CTS Options CTS can be run during place_opt
+source common_cts_settings_icc.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/common_cts_settings_icc.tcl
+Information: creating wire rule 'iccrm_clock_double_spacing'...
+================================================================================
+
+Nondefault routing rule name ( iccrm_clock_double_spacing ):
+================================================================================
+
+   Layers:
+   ----------------------------------------------------------------------------
+   layer     width     spacing   Extension      shield_width   shield_spacing
+   ----------------------------------------------------------------------------
+   M1        50        100       DEFAULT        N/A            N/A
+   M2        56        112       DEFAULT        N/A            N/A
+   M3        56        112       DEFAULT        N/A            N/A
+   M4        56        112       DEFAULT        N/A            N/A
+   M5        56        112       DEFAULT        N/A            N/A
+   M6        56        112       DEFAULT        N/A            N/A
+   M7        56        112       DEFAULT        N/A            N/A
+   M8        56        112       DEFAULT        N/A            N/A
+   M9        160       320       DEFAULT        N/A            N/A
+   MRDL      2000      4000      DEFAULT        N/A            N/A
+
+   Spacing weights:
+   ----------------------------------------------------------------------------
+   layer     spacing   weight    spc_len_thresh
+   ----------------------------------------------------------------------------
+   M1        100       1.00      0
+   M2        112       1.00      0
+   M3        112       1.00      0
+   M4        112       1.00      0
+   M5        112       1.00      0
+   M6        112       1.00      0
+   M7        112       1.00      0
+   M8        112       1.00      0
+   M9        320       1.00      0
+   MRDL      4000      1.00      0
+
+   Vias:
+
+   Same net spacing:
+   ----------------------------------------------------------------------------
+   layer1    layer2    spacing   is_stack
+   ----------------------------------------------------------------------------
+
+Info: Total 1 nondrules are reported
+Information: The design has horizontal rows, and Y-symmetry has been used for sites. (MWDC-217)
+Derived Core Area : (1000 1304) (724976 723608) is different from CEL Core Area (1000 1000) (724976 724976).
+Floorplan loading succeeded.
+Setting global CTS options...
+## Set Ideal Network so place_opt doesn't buffer clock nets
+## Remove before clock_opt cts
+## Uncertainty handling pre-cts
+set_ideal_network [all_fanout -flat -clock_tree ]
+Information: Updating graph... (UID-83)
+Warning: Design 'enc_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+if {$ICC_APPLY_RM_UNCERTAINTY_PRECTS } {
+   if {[file exists [which $ICC_UNCERTAINTY_PRECTS_FILE]] } {
+       echo "SCRIPT-Info: Sourcing the pre-cts uncertainty file : $ICC_UNCERTAINTY_PRECTS_FILE"
+       source  $ICC_UNCERTAINTY_PRECTS_FILE
+   }
+  }
+set_app_var compile_instance_name_prefix icc_place
+icc_place
+#######################
+## MAGNET PLACEMENT  ##
+#######################
+## Define e.g. a ram as a magnet and the command will pull the cells connected to this instance
+## closer to the magnet, depending on the -logical_level amount you provide.
+## When adding the -exclude_buffers option, you instruct the tool to pull buffers as well, but do not consider them in the
+## logical levels calculation
+#magnet_placement -exclude_buffers -logical_level 2 [get_cells "INST_RAM1 INST_RAM2"]
+##############################
+## RP : Relative Placement  ##
+##############################
+## Create RP constraints as shown below
+#create_rp_group Lachd_Result_reg -design ORCA -columns 1 -rows 8 -utilization 1.000000
+#add_to_rp_group ORCA::Lachd_Result_reg -leaf I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg_0_ -column 0 -row 0
+#add_to_rp_group ORCA::Lachd_Result_reg -leaf I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg_1_ -column 0 -row 1
+#add_to_rp_group ORCA::Lachd_Result_reg -leaf I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg_2_ -column 0 -row 2
+#add_to_rp_group ORCA::Lachd_Result_reg -leaf I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg_3_ -column 0 -row 3
+#add_to_rp_group ORCA::Lachd_Result_reg -leaf I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg_4_ -column 0 -row 4
+#add_to_rp_group ORCA::Lachd_Result_reg -leaf I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg_5_ -column 0 -row 5
+#add_to_rp_group ORCA::Lachd_Result_reg -leaf I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg_6_ -column 0 -row 6
+#add_to_rp_group ORCA::Lachd_Result_reg -leaf I_ORCA_TOP/I_RISC_CORE/I_ALU/Lachd_Result_reg_7_ -column 0 -row 7
+## Other commands that can be used for RP group creation are : extract_rp_group and order_rp_groups
+#extract_rp_group -group_name Lachd_Result_reg -objects [get_cells -hier Lachd_Result_reg*] -col 1 -apply
+#extract_rp_group -group_name Oprnd_A_reg -objects [get_cells -hier Oprnd_A_reg*] -col 1 -apply
+#extract_rp_group -group_name Oprnd_B_reg -objects [get_cells -hier Oprnd_B_reg*] -col 1 -apply
+#order_rp_group -group_name Oprnd_reg {ORCA::Oprnd_A_reg ORCA::Oprnd_B_reg} -apply
+if {$DYNAMIC_POWER} {
+  if {[file exists [which $ICC_IN_SAIF_FILE]]} {
+    read_saif -input $ICC_IN_SAIF_FILE -instance_name $ICC_SAIF_INSTANCE_NAME
+  }
+}
+if {$DFT && !$ICC_DP_DFT_FLOW} {
+  ##Read Scan Chain Information from DEF
+  if {[file exists [which $ICC_IN_SCAN_DEF_FILE]] } {
+       read_def $ICC_IN_SCAN_DEF_FILE
+     } else {
+       echo "SCRIPT-Error: Scan Def file $ICC_IN_SCAN_DEF_FILE is not found, but DFT is enabled. Please investigate it"
+       exit
+  }
+  check_scan_chain
+  redirect -file $REPORTS_DIR_PLACE_OPT/scan_chain_pre_ordering.rpt {report_scan_chain}
+}
+if {$LEAKAGE_POWER} {
+  set_multi_vth_constraint -reset
+
+  ############################################################
+  # %LVT leakage optimization flow (edit before using it)
+  ############################################################
+  # For limiting the number of low Vth cells in the design, set a multithreshold
+  # voltage constraint. This is a faster flow than the default leakage
+  # optimization flow, and does not use the leakage power values in the library.
+
+  # Edit the following to set the threshold voltage groups in the libraries
+  # set_attribute <my_hvt_lib> default_threshold_voltage_group HVT -type string
+  # set_attribute <my_lvt_lib> default_threshold_voltage_group LVT -type string
+
+  # Edit the following to set the multithreshold voltage constraint
+  # set_multi_vth_constraint -lvth_groups { LVT } -lvth_percentage <percent value>
+}
+Warning: The -cost option of the set_multi_vth_constraint command will be obsolete in a future release. (PWR-826)
+Information: LVTH cell count mode is disabled. Any previously specified leakage and dynamic power constraint will be valid. (PWR-803)
+1
+################################################################################
+## Save the environment snapshot for the Consistency Checker utility.
+#
+#  This utility checks for inconsistent settings between Design Compiler and
+#  IC Compiler which can contribute to correlation mismatches.
+#  Download this utility from SolvNet. See the following SolvNet article for
+#  complete details: https://solvnet.synopsys.com/retrieve/026366.html
+#  Uncomment the following lines to snapshot the environment.
+#	write_environment -consistency -output $RESULTS_DIR/${ICC_PLACE_OPT_CEL}.write_environment
+################################################################################
+if {$ICC_SANITY_CHECK} {check_physical_design -stage pre_place_opt -no_display}
+if { [check_error -verbose] != 0} { echo "SCRIPT-Error, flagging ..." }
+if {$ICC_ENABLE_CHECKPOINT} {
+echo "SCRIPT-Info : Please ensure there's enough disk space before enabling the set_checkpoint_strategy feature."
+set_checkpoint_strategy -enable -overwrite
+# The -overwrite option is used by default. Remove it if needed.
+}
+# YUNSUP: changed for fast p&r
+set place_opt_cmd "place_opt -effort $PLACE_OPT_EFFORT"
+place_opt -effort low
+if {$PLACE_OPT_CONGESTION} {lappend place_opt_cmd -congestion}
+place_opt -effort low -congestion
+if {$DFT} {lappend place_opt_cmd -optimize_dft}
+if {$LEAKAGE_POWER || $DYNAMIC_POWER || $ICC_LOW_POWER_PLACEMENT} {lappend place_opt_cmd -power}
+place_opt -effort low -congestion -power
+echo $place_opt_cmd
+place_opt -effort low -congestion -power
+eval $place_opt_cmd
+
+The options for place_opt:
+--------------------------
+POPT:  place_opt effort level               : low
+POPT:  Congestion removal                   : Yes
+POPT:  Layer Optimization                   : Yes
+POPT:  Area recovery                        : No
+POPT:  Optimize dft                         : No
+POPT:  Clock Tree Synthesis                 : No
+POPT:  Optimize power                       : Yes
+POPT:  Optimize power mode                  : Leakage
+---------------------------------------------------
+
+Settings of some common used Tcl variables for place_opt:
+---------------------------------------------------------
+---------------------------------------------------------
+
+  Loading design 'enc_top'
+Information: The library cell 'PMT3_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT2_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT1_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT3_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT2_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT1_RVT' in the library 'saed32rvt_tt1p05v25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+
+Warning: Port 'OEB1' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'clk' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+
+
+Information: Library Manufacturing Grid(GridResolution) : 1
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Warning: Mismatch in the main library and the Milkyway library resistance units. In the main library it is 1000.000 kohm and in the Milkyway design library it is 1.000 kohm. Check and correct the resistance units in the .tf and .db files. (PSYN-476)
+Information: Capacitance Unit from Milkyway design library: 'ff' 
+Information: Design Library and main library capacitance units are matched - 0.001 pf. 
+Information: Layer M1 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M6 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M7 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M8 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M9 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer MRDL is ignored for resistance and capacitance computation. (RCEX-019)
+
+TLU+ File = /home/ff/ee241/stdcells/synopsys-32nm/multi_vt/tluplus/max.tluplus
+TLU+ File = /home/ff/ee241/stdcells/synopsys-32nm/multi_vt/tluplus/min.tluplus
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+
+ Beginning Coarse Placement
+  --------------------------
+
+Information: Running stand-alone coarse placer in a separate process using temp directory '/tmp'. (PSYN-605)
+rpconn: child final code = 0x0
+Severe Error: Fatal error: Placer did not complete. (PSYN-375)
+Error: psynopt has abnormally terminated.  (OPT-100)
+Error: place_opt results invalid due to placer failure.
+Error: A Severe error has occurred. To ensure that the script does not continue, the value of sh_continue_on_error has been overridden to be false. Your script is being interrupted. To see the Tcl call stack for the part of your script which generated the Severe error use the error_info command.   (CMD-103)
+Error: Severe error encountered
+	Use error_info for more info. (CMD-013)
+Information: script '/home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/place_opt_icc.tcl'
+	stopped at line 141 due to error. (CMD-081)
+icc_shell> 
+icc_shell> 
+icc_shell> x[Kexit
+
+Thank you...
+Exit IC Compiler!

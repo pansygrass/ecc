@@ -80,3 +80,5 @@ setView 1 "left"
 setView 1 "left"
 setView 1 "right"
 zoomTo 1
+menuQuit
+formYes "Dialog Box"

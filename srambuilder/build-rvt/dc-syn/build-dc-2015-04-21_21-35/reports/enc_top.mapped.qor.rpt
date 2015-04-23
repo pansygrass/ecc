@@ -1,0 +1,89 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'enc_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : qor
+Design : enc_top
+Version: J-2014.09-SP3
+Date   : Tue Apr 21 21:48:00 2015
+****************************************
+
+
+  Timing Path Group (none)
+  -----------------------------------
+  Levels of Logic:               1.00
+  Critical Path Length:          0.15
+  Critical Path Slack:         uninit
+  Critical Path Clk Period:      0.14
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:       1025
+  Hierarchical Port Count:       4100
+  Leaf Cell Count:              65622
+  Buf/Inv Cell Count:            8612
+  Buf Cell Count:                8592
+  Inv Cell Count:                  20
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     31797
+  Sequential Cell Count:        33825
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    91747.254760
+  Noncombinational Area:
+                        222749.853056
+  Buf/Inv Area:          31566.717977
+  Total Buffer Area:         31539.02
+  Total Inverter Area:          27.70
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  Net XLength        :     1905984.88
+  Net YLength        :     1825819.00
+  -----------------------------------
+  Cell Area:            314497.107816
+  Design Area:          314497.107816
+  Net Length        :      3731804.00
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         65680
+  Nets With Violations:            34
+  Max Trans Violations:             0
+  Max Cap Violations:              34
+  -----------------------------------
+
+
+  Hostname: hpse-15.CS.Berkeley.EDU
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                   32.91
+  Logic Optimization:                 29.53
+  Mapping Optimization:              172.51
+  -----------------------------------------
+  Overall Compile Time:              559.53
+  Overall Compile Wall Clock Time:   599.67
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

@@ -113,3 +113,6 @@ Unable to set dimmed layer "10" line style to "none_@_Dim_@_"
 ;; setView 1 "left"
 ;; setView 1 "right"
 ;; zoomTo 1
+;; menuQuit
+;; formYes "Dialog Box"
+Thank you for using Milkyway

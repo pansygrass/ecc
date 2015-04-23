@@ -1,0 +1,20 @@
+set DESIGN_NAME                 "enc_top";
+ set STRIP_PATH                  "enc_top_tb/DUT0 ";
+ set ADDITIONAL_SEARCH_PATH      "/home/ff/ee241/stdcells/synopsys-32nm/multi_vt/db ../../../src ";
+ set TARGET_LIBRARY_FILES        "saed32rvt_tt1p05v25c.db  ";
+ set MW_REFERENCE_LIB_DIRS       "/home/ff/ee241/stdcells/synopsys-32nm/multi_vt/mw/cells_rvt.mw ";
+ set MIN_LIBRARY_FILES           "";
+ set TECH_FILE                   "/home/ff/ee241/stdcells/synopsys-32nm/multi_vt/techfile/techfile.tf";
+ set MAP_FILE                    "/home/ff/ee241/stdcells/synopsys-32nm/multi_vt/techfile/tech2itf.map";
+ set TLUPLUS_MAX_FILE            "/home/ff/ee241/stdcells/synopsys-32nm/multi_vt/tluplus/max.tluplus";
+ set TLUPLUS_MIN_FILE            "/home/ff/ee241/stdcells/synopsys-32nm/multi_vt/tluplus/min.tluplus";
+ set ALIB_DIR                    "../alib";
+ set RTL_SOURCE_FILES            "enc_top.v";
+ set DCRM_CONSTRAINTS_INPUT_FILE "constraints.tcl";
+ set REPORTS_DIR                 "reports";
+ set RESULTS_DIR                 "results";
+ set CLOCK_PERIOD                "0.135";
+ set CLOCK_UNCERTAINTY           "0.0075";
+ set INPUT_DELAY                 "0.030";
+ set OUTPUT_DELAY                "0.030";
+ 

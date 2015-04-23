@@ -1,0 +1,132 @@
+
+                          IC Compiler (TM)
+                         IC Compiler-PC (TM)
+                         IC Compiler-XP (TM)
+                         IC Compiler-DP (TM)
+                         IC Compiler-AG (TM)
+
+          Version J-2014.09-SP3 for RHEL64 -- Jan 13, 2015
+
+Zroute is the default router for ICC, ICC-PC, ICC-DP and ICC-AG in IC Compiler.
+         Classic router will continue to be fully supported.
+
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##########################################################################################
+# Version: D-2010.03-SP2 (July 6, 2010)
+# Copyright (C) 2007-2010 Synopsys, Inc. All rights reserved.
+##########################################################################################
+source icc_setup.tcl
+
+------------------- Internal Reference Library Settings -----------------
+
+Library    /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-19_17-05/enc_top_LIB
+  Reference    /home/ff/ee241/stdcells/synopsys-32nm/vendor/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
+
+
+------------------- Control File Reference Library Settings -----------
+
+Library    /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-19_17-05/enc_top_LIB
+  Reference    /home/ff/ee241/stdcells/synopsys-32nm/vendor/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
+-------------------------------------------------------------------------
+
+#############################################
+## clock_opt_route_icc: CLock Tree routing ##
+#############################################
+open_mw_lib $MW_DESIGN_LIBRARY
+{enc_top_LIB}
+redirect /dev/null "remove_mw_cel -version_kept 0 ${ICC_CLOCK_OPT_ROUTE_CEL}"
+copy_mw_cel -from $ICC_CLOCK_OPT_PSYN_CEL -to $ICC_CLOCK_OPT_ROUTE_CEL
+Error: Design 'clock_opt_psyn_icc' doesn't exist. (MWUI-009)
+0
+open_mw_cel $ICC_CLOCK_OPT_ROUTE_CEL
+Error: Design 'clock_opt_route_icc' doesn't exist. (MWUI-009)
+## Optimization Common Session Options - set in all sessions
+source common_optimization_settings_icc.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-19_17-05/common_optimization_settings_icc.tcl
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+source common_placement_settings_icc.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-19_17-05/common_placement_settings_icc.tcl
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+## Source CTS Options
+source common_cts_settings_icc.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-19_17-05/common_cts_settings_icc.tcl
+Error: Errors detected during redirect
+	Use error_info for more info. (CMD-013)
+## Source Post CTS Options
+source common_post_cts_timing_settings.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-19_17-05/common_post_cts_timing_settings.tcl
+## Source Route Options
+source common_route_si_settings_zrt_icc.tcl
+	Loading :		 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-19_17-05/common_route_si_settings_zrt_icc.tcl
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+SCRIPT-Info : Turning off antenna fixing
+1
+## Turning off SI for clock routing
+set_si_options -delta_delay false -min_delta_delay false -route_xtalk_prevention false
+Error: Current design is not defined. (UID-4)
+0
+if { [check_error -verbose] != 0} { echo "SCRIPT-Error, flagging ..." }
+{UID-4}
+SCRIPT-Error, flagging ...
+##################################
+#       CLOCK ROUTING            #
+##################################
+#set_delay_calculation -clock_arnoldi
+#route_zrt_group -all_clock_nets -reuse_existing_global_route true
+if { [check_error -verbose] != 0} { echo "SCRIPT-Error, flagging ..." }
+{UID-4}
+SCRIPT-Error, flagging ...
+if {$ICC_POST_CLOCK_ROUTE_CTO} {
+optimize_clock_tree -routed_clock_stage detail
+}
+if { [check_error -verbose] != 0} { echo "SCRIPT-Error, flagging ..." }
+{UID-4}
+SCRIPT-Error, flagging ...
+########################################
+#           CONNECT P/G                #
+########################################
+## Connect Power & Ground for non-MV and MV-mode
+if {[file exists [which $CUSTOM_CONNECT_PG_NETS_SCRIPT]]} {
+   source $CUSTOM_CONNECT_PG_NETS_SCRIPT
+ } else {
+    derive_pg_connection -power_net $MW_POWER_NET -power_pin $MW_POWER_PORT -ground_net $MW_GROUND_NET -ground_pin $MW_GROUND_PORT
+    if {!$ICC_TIE_CELL_FLOW} {derive_pg_connection -power_net $MW_POWER_NET -ground_net $MW_GROUND_NET -tie}
+   }
+0
+if { [check_error -verbose] != 0} { echo "SCRIPT-Error, flagging ..." }
+{UID-4}
+SCRIPT-Error, flagging ...
+if {$ICC_REPORTING_EFFORT != "OFF" } {
+     redirect -tee -file $REPORTS_DIR_CLOCK_OPT_ROUTE/$ICC_CLOCK_OPT_ROUTE_CEL.clock_tree {report_clock_tree -summary}     ;# global skew report
+     redirect -file $REPORTS_DIR_CLOCK_OPT_ROUTE/$ICC_CLOCK_OPT_ROUTE_CEL.clock_timing {report_clock_timing -type skew} ;# local skew report
+}
+if {$ICC_REPORTING_EFFORT != "OFF" } {
+ redirect -file $REPORTS_DIR_CLOCK_OPT_ROUTE/$ICC_CLOCK_OPT_ROUTE_CEL.max.tim {report_timing -capacitance -transition_time -input_pins -nets -delay max}
+ redirect -file $REPORTS_DIR_CLOCK_OPT_ROUTE/$ICC_CLOCK_OPT_ROUTE_CEL.min.tim {report_timing -capacitance -transition_time -input_pins -nets -delay min}
+}
+if {$ICC_REPORTING_EFFORT != "OFF" } {
+ redirect -tee -file $REPORTS_DIR_CLOCK_OPT_ROUTE/$ICC_CLOCK_OPT_ROUTE_CEL.qor {report_qor}
+ redirect -file $REPORTS_DIR_CLOCK_OPT_ROUTE/$ICC_CLOCK_OPT_ROUTE_CEL.con {report_constraints}
+}
+save_mw_cel -as $ICC_CLOCK_OPT_ROUTE_CEL
+Error: Cannot get cellId for the current design. (UIG-2)
+0
+if {$ICC_REPORTING_EFFORT != "OFF" } {
+ create_qor_snapshot -clock_tree -name $ICC_CLOCK_OPT_ROUTE_CEL
+ redirect -file $REPORTS_DIR_CLOCK_OPT_ROUTE/$ICC_CLOCK_OPT_ROUTE_CEL.qor_snapshot.rpt {report_qor_snapshot -no_display}
+}
+exit
+
+Thank you...
+Exit IC Compiler!
