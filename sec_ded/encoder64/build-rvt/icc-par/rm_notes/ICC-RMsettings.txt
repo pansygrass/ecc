@@ -1,0 +1,18 @@
+##############################################################
+# Reference methodology option settings selected by the user.
+#
+# Copyright (C) 2010 Synopsys, Inc. All rights reserved.
+##############################################################
+
+Option Name:  Setting
+=====================
+Focus on TTR or QoR or Feasibility:  QOR
+Multicorner-Multimode (MCMM) Optimization:  FALSE
+Multivoltage or Multisupply:  NONE
+Physical Guidance:  FALSE
+Flip Chip Design Style:  FALSE
+In-Design Rail Analysis:  FALSE
+Floorplan Style:  DEFAULT
+Design Style:  NONE
+Lynx Compatible:  FALSE
+
