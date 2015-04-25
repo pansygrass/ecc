@@ -12,7 +12,7 @@ UCB_STDCELLS = synopsys-32nm/multi_vt
 vlsidir = vlsi
 
 
-clock_period = 0.15
+clock_period = 0.95
 vcs_clock_period = 0$(shell echo "scale=4; ${clock_period}*1.0" | bc)
 dc_clock_period = 0$(shell echo "scale=4; ${clock_period}*0.9" | bc)
 
