@@ -993,7 +993,7 @@ module dec_top (input [40:0] IN,
 
 
     wire [9:0] CHK;
-    assign CHK <= IN[40:31];
+    assign CHK[9:0] = IN[40:31];
 
 
     always @(*) begin
