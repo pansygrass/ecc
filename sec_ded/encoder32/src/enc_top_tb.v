@@ -13,17 +13,17 @@ initial begin
 
 $vcdpluson;
     IN <= 32'd0;
-    #`CLOCK_PERIOD IN <= 32'd1;
-    #`CLOCK_PERIOD IN <= 32'd2;
-    #`CLOCK_PERIOD IN <= 32'd3;
-    #`CLOCK_PERIOD IN <= 32'd4;
-    #`CLOCK_PERIOD IN <= 32'd5;
-    #`CLOCK_PERIOD IN <= 32'd6;
-    #`CLOCK_PERIOD IN <= 32'd7;
-    #`CLOCK_PERIOD IN <= 32'd8;
-    #`CLOCK_PERIOD IN <= 32'd9;
-$vcdplusoff;
-
+    #`CLOCK_PERIOD IN <= 32'd1979398776;
+    #`CLOCK_PERIOD IN <= 32'd1010226197;
+    #`CLOCK_PERIOD IN <= 32'd3597602390;
+    #`CLOCK_PERIOD IN <= 32'd1658316396;
+    #`CLOCK_PERIOD IN <= 32'd3482235205;
+    #`CLOCK_PERIOD IN <= 32'd4270230797;
+    #`CLOCK_PERIOD IN <= 32'd2855215760;
+    #`CLOCK_PERIOD IN <= 32'd374275781 ;
+    #`CLOCK_PERIOD IN <= 32'd56948382  ;
+    #`CLOCK_PERIOD IN <= 32'd1429955813;
+$vcdplusoff;                 
 end
 
 initial begin
@@ -31,4 +31,3 @@ initial begin
 end
 
 endmodule
-
