@@ -82,7 +82,7 @@
 /home/ff/ee241/tools/icc/auxx/gui/common/schematic/DialogPathSchematicFanInOut.tcl
 /home/ff/ee241/tools/icc/auxx/gui/common/schematic/DialogPathSchematicAddPaths.tcl
 /home/ff/ee241/tools/icc/auxx/gui/common/layout/preferences.tcl
-/home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/route_icc.tcl
+/home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/route_opt_icc.tcl
 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/icc_setup.tcl
 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/make_generated_vars.tcl
 /home/cc/cs199/fa13/class/cs199-akd/241b/Project/git/ecc/srambuilder/build-rvt/icc-par/build-icc-2015-04-21_21-48/common_setup.tcl
