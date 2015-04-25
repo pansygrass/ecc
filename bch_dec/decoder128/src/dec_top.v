@@ -8160,7 +8160,7 @@ module dec_top (input [140:0] IN,
 
 
     wire [13:0] CHK;
-    assign CHK <= IN[140:127];
+    assign CHK = IN[140:127];
 
 
     always @(*) begin
