@@ -46,11 +46,11 @@ library("SRAM1R1W1024x32") {
     bit_to : 0 ;
     downto : true ;
   }
-  type( A_bus_9_to_0 ) {
+  type( A_bus_7_to_0 ) {
     base_type : array ;
     data_type : bit
-    bit_width : 10 ;
-    bit_from : 9 ;
+    bit_width : 8 ;
+    bit_from : 7 ;
     bit_to : 0 ;
     downto : true ;
   }
@@ -64,8 +64,8 @@ library("SRAM1R1W1024x32") {
   }
 
   cell (SRAM1R1W1024x32) {
-    area :  18623.672;
-    cell_leakage_power : 546015000.000 ;
+    area :  4690.297;
+    cell_leakage_power : 164008000.000 ;
 
     pg_pin(VDD) {
         pg_type : primary_power;
@@ -86,10 +86,10 @@ library("SRAM1R1W1024x32") {
       internal_power() {
         when : "!CE1*!CSB1*!OEB1";
         fall_power(scalar) {
-          values("1.6");
+          values("0.6");
         }
         rise_power(scalar) {
-          values("1.6");
+          values("0.6");
         }
       }
     }
@@ -135,7 +135,7 @@ library("SRAM1R1W1024x32") {
     }
 
     bus(A1) {
-      bus_type : A_bus_9_to_0 ;
+      bus_type : A_bus_7_to_0 ;
       direction : input;
       capacitance : 0.001;
       related_power_pin : VDD;
@@ -164,9 +164,9 @@ library("SRAM1R1W1024x32") {
       timing () {
         timing_type : "rising_edge";
         related_pin : "CE1";
-        intrinsic_rise : 0.380 ;
+        intrinsic_rise : 0.336 ;
         rise_resistance : 0.01 ;
-        intrinsic_fall : 0.380 ;
+        intrinsic_fall : 0.336 ;
         fall_resistance : 0.01 ;
       }
     }
@@ -181,10 +181,10 @@ library("SRAM1R1W1024x32") {
       internal_power() {
         when : "!CE2*!CSB2*!WEB2";
         fall_power(scalar) {
-          values("0.9");
+          values("0.5");
         }
         rise_power(scalar) {
-          values("0.9");
+          values("0.5");
         }
       }
     }
@@ -230,7 +230,7 @@ library("SRAM1R1W1024x32") {
     }
 
     bus(A2) {
-      bus_type : A_bus_9_to_0 ;
+      bus_type : A_bus_7_to_0 ;
       direction : input;
       capacitance : 0.001;
       related_power_pin : VDD;

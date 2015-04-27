@@ -4,12 +4,12 @@ module SRAM1R1W1024x32 ( A1, CE1, OEB1, CSB1, O1, A2, CE2, WEB2, CSB2, I2 );
 input CE1;
 input OEB1;
 input CSB1;
-input [9:0] A1;
+input [7:0] A1;
 output reg [31:0] O1;
 input CE2;
 input WEB2;
 input CSB2;
-input [9:0] A2;
+input [7:0] A2;
 input [31:0] I2;
 
 reg notifier;
@@ -25,8 +25,6 @@ $setuphold(posedge CE1, A1[4], 0, 0, notifier);
 $setuphold(posedge CE1, A1[5], 0, 0, notifier);
 $setuphold(posedge CE1, A1[6], 0, 0, notifier);
 $setuphold(posedge CE1, A1[7], 0, 0, notifier);
-$setuphold(posedge CE1, A1[8], 0, 0, notifier);
-$setuphold(posedge CE1, A1[9], 0, 0, notifier);
 (posedge CE1 => O1[0]) = (0.3:0.3:0.3);
 (posedge CE1 => O1[1]) = (0.3:0.3:0.3);
 (posedge CE1 => O1[2]) = (0.3:0.3:0.3);
@@ -69,8 +67,6 @@ $setuphold(posedge CE2, A2[4], 0, 0, notifier);
 $setuphold(posedge CE2, A2[5], 0, 0, notifier);
 $setuphold(posedge CE2, A2[6], 0, 0, notifier);
 $setuphold(posedge CE2, A2[7], 0, 0, notifier);
-$setuphold(posedge CE2, A2[8], 0, 0, notifier);
-$setuphold(posedge CE2, A2[9], 0, 0, notifier);
 $setuphold(posedge CE2, I2[0], 0, 0, notifier);
 $setuphold(posedge CE2, I2[1], 0, 0, notifier);
 $setuphold(posedge CE2, I2[2], 0, 0, notifier);
@@ -105,12 +101,12 @@ $setuphold(posedge CE2, I2[30], 0, 0, notifier);
 $setuphold(posedge CE2, I2[31], 0, 0, notifier);
 endspecify
 
-reg [31:0] memory[1023:0];
+reg [31:0] memory[255:0];
 `ifndef SYNTHESIS
   integer initvar;
   initial begin
     #0.002;
-    for (initvar = 0; initvar < 1024; initvar = initvar+1)
+    for (initvar = 0; initvar < 256; initvar = initvar+1)
       memory[initvar] = {1 {$random}};
   end
 `endif

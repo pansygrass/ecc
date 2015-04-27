@@ -7,7 +7,7 @@ MACRO SRAM1R1W1024x32
   CLASS BLOCK ;
   SOURCE USER ;
   ORIGIN 0 0 ;
-  SIZE 278.464 BY 66.880 ;
+  SIZE 74.176 BY 63.232 ;
   SYMMETRY X Y R90 ;
 
   PIN CE1
@@ -15,19 +15,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 263.568 0.000 263.720 0.152 ;
+        RECT 65.664 0.000 65.816 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 263.568 0.000 263.720 0.152 ;
+        RECT 65.664 0.000 65.816 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 263.568 0.000 263.720 0.152 ;
+        RECT 65.664 0.000 65.816 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 263.568 0.000 263.720 0.152 ;
+        RECT 65.664 0.000 65.816 0.152 ;
     END
   END CE1
 
@@ -36,19 +36,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 252.016 0.000 252.168 0.152 ;
+        RECT 63.536 0.000 63.688 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 252.016 0.000 252.168 0.152 ;
+        RECT 63.536 0.000 63.688 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 252.016 0.000 252.168 0.152 ;
+        RECT 63.536 0.000 63.688 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 252.016 0.000 252.168 0.152 ;
+        RECT 63.536 0.000 63.688 0.152 ;
     END
   END CSB1
 
@@ -57,19 +57,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 240.464 0.000 240.616 0.152 ;
+        RECT 61.408 0.000 61.560 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 240.464 0.000 240.616 0.152 ;
+        RECT 61.408 0.000 61.560 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 240.464 0.000 240.616 0.152 ;
+        RECT 61.408 0.000 61.560 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 240.464 0.000 240.616 0.152 ;
+        RECT 61.408 0.000 61.560 0.152 ;
     END
   END OEB1
 
@@ -78,19 +78,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 228.912 0.000 229.064 0.152 ;
+        RECT 59.280 0.000 59.432 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 228.912 0.000 229.064 0.152 ;
+        RECT 59.280 0.000 59.432 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 228.912 0.000 229.064 0.152 ;
+        RECT 59.280 0.000 59.432 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 228.912 0.000 229.064 0.152 ;
+        RECT 59.280 0.000 59.432 0.152 ;
     END
   END O1[3]
 
@@ -99,19 +99,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 228.608 0.000 228.760 0.152 ;
+        RECT 58.976 0.000 59.128 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 228.608 0.000 228.760 0.152 ;
+        RECT 58.976 0.000 59.128 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 228.608 0.000 228.760 0.152 ;
+        RECT 58.976 0.000 59.128 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 228.608 0.000 228.760 0.152 ;
+        RECT 58.976 0.000 59.128 0.152 ;
     END
   END O1[2]
 
@@ -120,19 +120,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 228.304 0.000 228.456 0.152 ;
+        RECT 58.672 0.000 58.824 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 228.304 0.000 228.456 0.152 ;
+        RECT 58.672 0.000 58.824 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 228.304 0.000 228.456 0.152 ;
+        RECT 58.672 0.000 58.824 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 228.304 0.000 228.456 0.152 ;
+        RECT 58.672 0.000 58.824 0.152 ;
     END
   END O1[1]
 
@@ -141,19 +141,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 228.000 0.000 228.152 0.152 ;
+        RECT 58.368 0.000 58.520 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 228.000 0.000 228.152 0.152 ;
+        RECT 58.368 0.000 58.520 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 228.000 0.000 228.152 0.152 ;
+        RECT 58.368 0.000 58.520 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 228.000 0.000 228.152 0.152 ;
+        RECT 58.368 0.000 58.520 0.152 ;
     END
   END O1[0]
 
@@ -162,19 +162,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 216.448 0.000 216.600 0.152 ;
+        RECT 56.240 0.000 56.392 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 216.448 0.000 216.600 0.152 ;
+        RECT 56.240 0.000 56.392 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 216.448 0.000 216.600 0.152 ;
+        RECT 56.240 0.000 56.392 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 216.448 0.000 216.600 0.152 ;
+        RECT 56.240 0.000 56.392 0.152 ;
     END
   END O1[7]
 
@@ -183,19 +183,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 216.144 0.000 216.296 0.152 ;
+        RECT 55.936 0.000 56.088 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 216.144 0.000 216.296 0.152 ;
+        RECT 55.936 0.000 56.088 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 216.144 0.000 216.296 0.152 ;
+        RECT 55.936 0.000 56.088 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 216.144 0.000 216.296 0.152 ;
+        RECT 55.936 0.000 56.088 0.152 ;
     END
   END O1[6]
 
@@ -204,19 +204,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 215.840 0.000 215.992 0.152 ;
+        RECT 55.632 0.000 55.784 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 215.840 0.000 215.992 0.152 ;
+        RECT 55.632 0.000 55.784 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 215.840 0.000 215.992 0.152 ;
+        RECT 55.632 0.000 55.784 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 215.840 0.000 215.992 0.152 ;
+        RECT 55.632 0.000 55.784 0.152 ;
     END
   END O1[5]
 
@@ -225,19 +225,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 215.536 0.000 215.688 0.152 ;
+        RECT 55.328 0.000 55.480 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 215.536 0.000 215.688 0.152 ;
+        RECT 55.328 0.000 55.480 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 215.536 0.000 215.688 0.152 ;
+        RECT 55.328 0.000 55.480 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 215.536 0.000 215.688 0.152 ;
+        RECT 55.328 0.000 55.480 0.152 ;
     END
   END O1[4]
 
@@ -246,19 +246,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 203.984 0.000 204.136 0.152 ;
+        RECT 53.200 0.000 53.352 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 203.984 0.000 204.136 0.152 ;
+        RECT 53.200 0.000 53.352 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 203.984 0.000 204.136 0.152 ;
+        RECT 53.200 0.000 53.352 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 203.984 0.000 204.136 0.152 ;
+        RECT 53.200 0.000 53.352 0.152 ;
     END
   END O1[11]
 
@@ -267,19 +267,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 203.680 0.000 203.832 0.152 ;
+        RECT 52.896 0.000 53.048 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 203.680 0.000 203.832 0.152 ;
+        RECT 52.896 0.000 53.048 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 203.680 0.000 203.832 0.152 ;
+        RECT 52.896 0.000 53.048 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 203.680 0.000 203.832 0.152 ;
+        RECT 52.896 0.000 53.048 0.152 ;
     END
   END O1[10]
 
@@ -288,19 +288,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 203.376 0.000 203.528 0.152 ;
+        RECT 52.592 0.000 52.744 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 203.376 0.000 203.528 0.152 ;
+        RECT 52.592 0.000 52.744 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 203.376 0.000 203.528 0.152 ;
+        RECT 52.592 0.000 52.744 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 203.376 0.000 203.528 0.152 ;
+        RECT 52.592 0.000 52.744 0.152 ;
     END
   END O1[9]
 
@@ -309,19 +309,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 203.072 0.000 203.224 0.152 ;
+        RECT 52.288 0.000 52.440 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 203.072 0.000 203.224 0.152 ;
+        RECT 52.288 0.000 52.440 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 203.072 0.000 203.224 0.152 ;
+        RECT 52.288 0.000 52.440 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 203.072 0.000 203.224 0.152 ;
+        RECT 52.288 0.000 52.440 0.152 ;
     END
   END O1[8]
 
@@ -330,19 +330,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 191.520 0.000 191.672 0.152 ;
+        RECT 50.160 0.000 50.312 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 191.520 0.000 191.672 0.152 ;
+        RECT 50.160 0.000 50.312 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 191.520 0.000 191.672 0.152 ;
+        RECT 50.160 0.000 50.312 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 191.520 0.000 191.672 0.152 ;
+        RECT 50.160 0.000 50.312 0.152 ;
     END
   END O1[15]
 
@@ -351,19 +351,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 191.216 0.000 191.368 0.152 ;
+        RECT 49.856 0.000 50.008 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 191.216 0.000 191.368 0.152 ;
+        RECT 49.856 0.000 50.008 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 191.216 0.000 191.368 0.152 ;
+        RECT 49.856 0.000 50.008 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 191.216 0.000 191.368 0.152 ;
+        RECT 49.856 0.000 50.008 0.152 ;
     END
   END O1[14]
 
@@ -372,19 +372,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 190.912 0.000 191.064 0.152 ;
+        RECT 49.552 0.000 49.704 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 190.912 0.000 191.064 0.152 ;
+        RECT 49.552 0.000 49.704 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 190.912 0.000 191.064 0.152 ;
+        RECT 49.552 0.000 49.704 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 190.912 0.000 191.064 0.152 ;
+        RECT 49.552 0.000 49.704 0.152 ;
     END
   END O1[13]
 
@@ -393,19 +393,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 190.608 0.000 190.760 0.152 ;
+        RECT 49.248 0.000 49.400 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 190.608 0.000 190.760 0.152 ;
+        RECT 49.248 0.000 49.400 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 190.608 0.000 190.760 0.152 ;
+        RECT 49.248 0.000 49.400 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 190.608 0.000 190.760 0.152 ;
+        RECT 49.248 0.000 49.400 0.152 ;
     END
   END O1[12]
 
@@ -414,19 +414,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 179.056 0.000 179.208 0.152 ;
+        RECT 47.120 0.000 47.272 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 179.056 0.000 179.208 0.152 ;
+        RECT 47.120 0.000 47.272 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 179.056 0.000 179.208 0.152 ;
+        RECT 47.120 0.000 47.272 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 179.056 0.000 179.208 0.152 ;
+        RECT 47.120 0.000 47.272 0.152 ;
     END
   END O1[19]
 
@@ -435,19 +435,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 178.752 0.000 178.904 0.152 ;
+        RECT 46.816 0.000 46.968 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 178.752 0.000 178.904 0.152 ;
+        RECT 46.816 0.000 46.968 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 178.752 0.000 178.904 0.152 ;
+        RECT 46.816 0.000 46.968 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 178.752 0.000 178.904 0.152 ;
+        RECT 46.816 0.000 46.968 0.152 ;
     END
   END O1[18]
 
@@ -456,19 +456,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 178.448 0.000 178.600 0.152 ;
+        RECT 46.512 0.000 46.664 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 178.448 0.000 178.600 0.152 ;
+        RECT 46.512 0.000 46.664 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 178.448 0.000 178.600 0.152 ;
+        RECT 46.512 0.000 46.664 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 178.448 0.000 178.600 0.152 ;
+        RECT 46.512 0.000 46.664 0.152 ;
     END
   END O1[17]
 
@@ -477,19 +477,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 178.144 0.000 178.296 0.152 ;
+        RECT 46.208 0.000 46.360 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 178.144 0.000 178.296 0.152 ;
+        RECT 46.208 0.000 46.360 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 178.144 0.000 178.296 0.152 ;
+        RECT 46.208 0.000 46.360 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 178.144 0.000 178.296 0.152 ;
+        RECT 46.208 0.000 46.360 0.152 ;
     END
   END O1[16]
 
@@ -498,19 +498,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 166.592 0.000 166.744 0.152 ;
+        RECT 44.080 0.000 44.232 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 166.592 0.000 166.744 0.152 ;
+        RECT 44.080 0.000 44.232 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 166.592 0.000 166.744 0.152 ;
+        RECT 44.080 0.000 44.232 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 166.592 0.000 166.744 0.152 ;
+        RECT 44.080 0.000 44.232 0.152 ;
     END
   END O1[23]
 
@@ -519,19 +519,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 166.288 0.000 166.440 0.152 ;
+        RECT 43.776 0.000 43.928 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 166.288 0.000 166.440 0.152 ;
+        RECT 43.776 0.000 43.928 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 166.288 0.000 166.440 0.152 ;
+        RECT 43.776 0.000 43.928 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 166.288 0.000 166.440 0.152 ;
+        RECT 43.776 0.000 43.928 0.152 ;
     END
   END O1[22]
 
@@ -540,19 +540,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 165.984 0.000 166.136 0.152 ;
+        RECT 43.472 0.000 43.624 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 165.984 0.000 166.136 0.152 ;
+        RECT 43.472 0.000 43.624 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 165.984 0.000 166.136 0.152 ;
+        RECT 43.472 0.000 43.624 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 165.984 0.000 166.136 0.152 ;
+        RECT 43.472 0.000 43.624 0.152 ;
     END
   END O1[21]
 
@@ -561,19 +561,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 165.680 0.000 165.832 0.152 ;
+        RECT 43.168 0.000 43.320 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 165.680 0.000 165.832 0.152 ;
+        RECT 43.168 0.000 43.320 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 165.680 0.000 165.832 0.152 ;
+        RECT 43.168 0.000 43.320 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 165.680 0.000 165.832 0.152 ;
+        RECT 43.168 0.000 43.320 0.152 ;
     END
   END O1[20]
 
@@ -582,19 +582,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 154.128 0.000 154.280 0.152 ;
+        RECT 41.040 0.000 41.192 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 154.128 0.000 154.280 0.152 ;
+        RECT 41.040 0.000 41.192 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 154.128 0.000 154.280 0.152 ;
+        RECT 41.040 0.000 41.192 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 154.128 0.000 154.280 0.152 ;
+        RECT 41.040 0.000 41.192 0.152 ;
     END
   END O1[27]
 
@@ -603,19 +603,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 153.824 0.000 153.976 0.152 ;
+        RECT 40.736 0.000 40.888 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 153.824 0.000 153.976 0.152 ;
+        RECT 40.736 0.000 40.888 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 153.824 0.000 153.976 0.152 ;
+        RECT 40.736 0.000 40.888 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 153.824 0.000 153.976 0.152 ;
+        RECT 40.736 0.000 40.888 0.152 ;
     END
   END O1[26]
 
@@ -624,19 +624,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 153.520 0.000 153.672 0.152 ;
+        RECT 40.432 0.000 40.584 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 153.520 0.000 153.672 0.152 ;
+        RECT 40.432 0.000 40.584 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 153.520 0.000 153.672 0.152 ;
+        RECT 40.432 0.000 40.584 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 153.520 0.000 153.672 0.152 ;
+        RECT 40.432 0.000 40.584 0.152 ;
     END
   END O1[25]
 
@@ -645,19 +645,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 153.216 0.000 153.368 0.152 ;
+        RECT 40.128 0.000 40.280 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 153.216 0.000 153.368 0.152 ;
+        RECT 40.128 0.000 40.280 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 153.216 0.000 153.368 0.152 ;
+        RECT 40.128 0.000 40.280 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 153.216 0.000 153.368 0.152 ;
+        RECT 40.128 0.000 40.280 0.152 ;
     END
   END O1[24]
 
@@ -666,19 +666,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 141.664 0.000 141.816 0.152 ;
+        RECT 38.000 0.000 38.152 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 141.664 0.000 141.816 0.152 ;
+        RECT 38.000 0.000 38.152 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 141.664 0.000 141.816 0.152 ;
+        RECT 38.000 0.000 38.152 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 141.664 0.000 141.816 0.152 ;
+        RECT 38.000 0.000 38.152 0.152 ;
     END
   END O1[31]
 
@@ -687,19 +687,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 141.360 0.000 141.512 0.152 ;
+        RECT 37.696 0.000 37.848 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 141.360 0.000 141.512 0.152 ;
+        RECT 37.696 0.000 37.848 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 141.360 0.000 141.512 0.152 ;
+        RECT 37.696 0.000 37.848 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 141.360 0.000 141.512 0.152 ;
+        RECT 37.696 0.000 37.848 0.152 ;
     END
   END O1[30]
 
@@ -708,19 +708,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 141.056 0.000 141.208 0.152 ;
+        RECT 37.392 0.000 37.544 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 141.056 0.000 141.208 0.152 ;
+        RECT 37.392 0.000 37.544 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 141.056 0.000 141.208 0.152 ;
+        RECT 37.392 0.000 37.544 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 141.056 0.000 141.208 0.152 ;
+        RECT 37.392 0.000 37.544 0.152 ;
     END
   END O1[29]
 
@@ -729,19 +729,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 140.752 0.000 140.904 0.152 ;
+        RECT 37.088 0.000 37.240 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 140.752 0.000 140.904 0.152 ;
+        RECT 37.088 0.000 37.240 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 140.752 0.000 140.904 0.152 ;
+        RECT 37.088 0.000 37.240 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 140.752 0.000 140.904 0.152 ;
+        RECT 37.088 0.000 37.240 0.152 ;
     END
   END O1[28]
 
@@ -750,19 +750,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 278.312 58.520 278.464 58.672 ;
+        RECT 74.024 55.328 74.176 55.480 ;
     END
     PORT
       LAYER M3 ;
-        RECT 278.312 58.520 278.464 58.672 ;
+        RECT 74.024 55.328 74.176 55.480 ;
     END
     PORT
       LAYER M4 ;
-        RECT 278.312 58.520 278.464 58.672 ;
+        RECT 74.024 55.328 74.176 55.480 ;
     END
     PORT
       LAYER M5 ;
-        RECT 278.312 58.520 278.464 58.672 ;
+        RECT 74.024 55.328 74.176 55.480 ;
     END
   END A1[0]
 
@@ -771,19 +771,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 278.312 54.872 278.464 55.024 ;
+        RECT 74.024 51.680 74.176 51.832 ;
     END
     PORT
       LAYER M3 ;
-        RECT 278.312 54.872 278.464 55.024 ;
+        RECT 74.024 51.680 74.176 51.832 ;
     END
     PORT
       LAYER M4 ;
-        RECT 278.312 54.872 278.464 55.024 ;
+        RECT 74.024 51.680 74.176 51.832 ;
     END
     PORT
       LAYER M5 ;
-        RECT 278.312 54.872 278.464 55.024 ;
+        RECT 74.024 51.680 74.176 51.832 ;
     END
   END A1[1]
 
@@ -792,19 +792,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 278.312 51.224 278.464 51.376 ;
+        RECT 74.024 48.032 74.176 48.184 ;
     END
     PORT
       LAYER M3 ;
-        RECT 278.312 51.224 278.464 51.376 ;
+        RECT 74.024 48.032 74.176 48.184 ;
     END
     PORT
       LAYER M4 ;
-        RECT 278.312 51.224 278.464 51.376 ;
+        RECT 74.024 48.032 74.176 48.184 ;
     END
     PORT
       LAYER M5 ;
-        RECT 278.312 51.224 278.464 51.376 ;
+        RECT 74.024 48.032 74.176 48.184 ;
     END
   END A1[2]
 
@@ -813,19 +813,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 278.312 47.576 278.464 47.728 ;
+        RECT 74.024 44.384 74.176 44.536 ;
     END
     PORT
       LAYER M3 ;
-        RECT 278.312 47.576 278.464 47.728 ;
+        RECT 74.024 44.384 74.176 44.536 ;
     END
     PORT
       LAYER M4 ;
-        RECT 278.312 47.576 278.464 47.728 ;
+        RECT 74.024 44.384 74.176 44.536 ;
     END
     PORT
       LAYER M5 ;
-        RECT 278.312 47.576 278.464 47.728 ;
+        RECT 74.024 44.384 74.176 44.536 ;
     END
   END A1[3]
 
@@ -834,19 +834,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 278.312 43.928 278.464 44.080 ;
+        RECT 74.024 40.736 74.176 40.888 ;
     END
     PORT
       LAYER M3 ;
-        RECT 278.312 43.928 278.464 44.080 ;
+        RECT 74.024 40.736 74.176 40.888 ;
     END
     PORT
       LAYER M4 ;
-        RECT 278.312 43.928 278.464 44.080 ;
+        RECT 74.024 40.736 74.176 40.888 ;
     END
     PORT
       LAYER M5 ;
-        RECT 278.312 43.928 278.464 44.080 ;
+        RECT 74.024 40.736 74.176 40.888 ;
     END
   END A1[4]
 
@@ -855,19 +855,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 278.312 40.280 278.464 40.432 ;
+        RECT 74.024 37.088 74.176 37.240 ;
     END
     PORT
       LAYER M3 ;
-        RECT 278.312 40.280 278.464 40.432 ;
+        RECT 74.024 37.088 74.176 37.240 ;
     END
     PORT
       LAYER M4 ;
-        RECT 278.312 40.280 278.464 40.432 ;
+        RECT 74.024 37.088 74.176 37.240 ;
     END
     PORT
       LAYER M5 ;
-        RECT 278.312 40.280 278.464 40.432 ;
+        RECT 74.024 37.088 74.176 37.240 ;
     END
   END A1[5]
 
@@ -876,19 +876,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 278.312 36.632 278.464 36.784 ;
+        RECT 74.024 33.440 74.176 33.592 ;
     END
     PORT
       LAYER M3 ;
-        RECT 278.312 36.632 278.464 36.784 ;
+        RECT 74.024 33.440 74.176 33.592 ;
     END
     PORT
       LAYER M4 ;
-        RECT 278.312 36.632 278.464 36.784 ;
+        RECT 74.024 33.440 74.176 33.592 ;
     END
     PORT
       LAYER M5 ;
-        RECT 278.312 36.632 278.464 36.784 ;
+        RECT 74.024 33.440 74.176 33.592 ;
     END
   END A1[6]
 
@@ -897,82 +897,40 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 278.312 32.984 278.464 33.136 ;
+        RECT 74.024 29.792 74.176 29.944 ;
     END
     PORT
       LAYER M3 ;
-        RECT 278.312 32.984 278.464 33.136 ;
+        RECT 74.024 29.792 74.176 29.944 ;
     END
     PORT
       LAYER M4 ;
-        RECT 278.312 32.984 278.464 33.136 ;
+        RECT 74.024 29.792 74.176 29.944 ;
     END
     PORT
       LAYER M5 ;
-        RECT 278.312 32.984 278.464 33.136 ;
+        RECT 74.024 29.792 74.176 29.944 ;
     END
   END A1[7]
-
-  PIN A1[8]
-    DIRECTION INPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER M2 ;
-        RECT 278.312 29.336 278.464 29.488 ;
-    END
-    PORT
-      LAYER M3 ;
-        RECT 278.312 29.336 278.464 29.488 ;
-    END
-    PORT
-      LAYER M4 ;
-        RECT 278.312 29.336 278.464 29.488 ;
-    END
-    PORT
-      LAYER M5 ;
-        RECT 278.312 29.336 278.464 29.488 ;
-    END
-  END A1[8]
-
-  PIN A1[9]
-    DIRECTION INPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER M2 ;
-        RECT 278.312 25.688 278.464 25.840 ;
-    END
-    PORT
-      LAYER M3 ;
-        RECT 278.312 25.688 278.464 25.840 ;
-    END
-    PORT
-      LAYER M4 ;
-        RECT 278.312 25.688 278.464 25.840 ;
-    END
-    PORT
-      LAYER M5 ;
-        RECT 278.312 25.688 278.464 25.840 ;
-    END
-  END A1[9]
 
   PIN CE2
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 14.896 0.000 15.048 0.152 ;
+        RECT 8.512 0.000 8.664 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 14.896 0.000 15.048 0.152 ;
+        RECT 8.512 0.000 8.664 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 14.896 0.000 15.048 0.152 ;
+        RECT 8.512 0.000 8.664 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 14.896 0.000 15.048 0.152 ;
+        RECT 8.512 0.000 8.664 0.152 ;
     END
   END CE2
 
@@ -981,19 +939,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 26.448 0.000 26.600 0.152 ;
+        RECT 10.640 0.000 10.792 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 26.448 0.000 26.600 0.152 ;
+        RECT 10.640 0.000 10.792 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 26.448 0.000 26.600 0.152 ;
+        RECT 10.640 0.000 10.792 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 26.448 0.000 26.600 0.152 ;
+        RECT 10.640 0.000 10.792 0.152 ;
     END
   END CSB2
 
@@ -1002,19 +960,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 38.000 0.000 38.152 0.152 ;
+        RECT 12.768 0.000 12.920 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 38.000 0.000 38.152 0.152 ;
+        RECT 12.768 0.000 12.920 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 38.000 0.000 38.152 0.152 ;
+        RECT 12.768 0.000 12.920 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 38.000 0.000 38.152 0.152 ;
+        RECT 12.768 0.000 12.920 0.152 ;
     END
   END I2[0]
 
@@ -1023,19 +981,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 38.304 0.000 38.456 0.152 ;
+        RECT 13.072 0.000 13.224 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 38.304 0.000 38.456 0.152 ;
+        RECT 13.072 0.000 13.224 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 38.304 0.000 38.456 0.152 ;
+        RECT 13.072 0.000 13.224 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 38.304 0.000 38.456 0.152 ;
+        RECT 13.072 0.000 13.224 0.152 ;
     END
   END I2[1]
 
@@ -1044,19 +1002,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 38.608 0.000 38.760 0.152 ;
+        RECT 13.376 0.000 13.528 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 38.608 0.000 38.760 0.152 ;
+        RECT 13.376 0.000 13.528 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 38.608 0.000 38.760 0.152 ;
+        RECT 13.376 0.000 13.528 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 38.608 0.000 38.760 0.152 ;
+        RECT 13.376 0.000 13.528 0.152 ;
     END
   END I2[2]
 
@@ -1065,19 +1023,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 38.912 0.000 39.064 0.152 ;
+        RECT 13.680 0.000 13.832 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 38.912 0.000 39.064 0.152 ;
+        RECT 13.680 0.000 13.832 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 38.912 0.000 39.064 0.152 ;
+        RECT 13.680 0.000 13.832 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 38.912 0.000 39.064 0.152 ;
+        RECT 13.680 0.000 13.832 0.152 ;
     END
   END I2[3]
 
@@ -1086,19 +1044,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 50.464 0.000 50.616 0.152 ;
+        RECT 15.808 0.000 15.960 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 50.464 0.000 50.616 0.152 ;
+        RECT 15.808 0.000 15.960 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 50.464 0.000 50.616 0.152 ;
+        RECT 15.808 0.000 15.960 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 50.464 0.000 50.616 0.152 ;
+        RECT 15.808 0.000 15.960 0.152 ;
     END
   END I2[4]
 
@@ -1107,19 +1065,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 50.768 0.000 50.920 0.152 ;
+        RECT 16.112 0.000 16.264 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 50.768 0.000 50.920 0.152 ;
+        RECT 16.112 0.000 16.264 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 50.768 0.000 50.920 0.152 ;
+        RECT 16.112 0.000 16.264 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 50.768 0.000 50.920 0.152 ;
+        RECT 16.112 0.000 16.264 0.152 ;
     END
   END I2[5]
 
@@ -1128,19 +1086,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 51.072 0.000 51.224 0.152 ;
+        RECT 16.416 0.000 16.568 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 51.072 0.000 51.224 0.152 ;
+        RECT 16.416 0.000 16.568 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 51.072 0.000 51.224 0.152 ;
+        RECT 16.416 0.000 16.568 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 51.072 0.000 51.224 0.152 ;
+        RECT 16.416 0.000 16.568 0.152 ;
     END
   END I2[6]
 
@@ -1149,19 +1107,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 51.376 0.000 51.528 0.152 ;
+        RECT 16.720 0.000 16.872 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 51.376 0.000 51.528 0.152 ;
+        RECT 16.720 0.000 16.872 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 51.376 0.000 51.528 0.152 ;
+        RECT 16.720 0.000 16.872 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 51.376 0.000 51.528 0.152 ;
+        RECT 16.720 0.000 16.872 0.152 ;
     END
   END I2[7]
 
@@ -1170,19 +1128,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 62.928 0.000 63.080 0.152 ;
+        RECT 18.848 0.000 19.000 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 62.928 0.000 63.080 0.152 ;
+        RECT 18.848 0.000 19.000 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 62.928 0.000 63.080 0.152 ;
+        RECT 18.848 0.000 19.000 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 62.928 0.000 63.080 0.152 ;
+        RECT 18.848 0.000 19.000 0.152 ;
     END
   END I2[8]
 
@@ -1191,19 +1149,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 63.232 0.000 63.384 0.152 ;
+        RECT 19.152 0.000 19.304 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 63.232 0.000 63.384 0.152 ;
+        RECT 19.152 0.000 19.304 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 63.232 0.000 63.384 0.152 ;
+        RECT 19.152 0.000 19.304 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 63.232 0.000 63.384 0.152 ;
+        RECT 19.152 0.000 19.304 0.152 ;
     END
   END I2[9]
 
@@ -1212,19 +1170,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 63.536 0.000 63.688 0.152 ;
+        RECT 19.456 0.000 19.608 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 63.536 0.000 63.688 0.152 ;
+        RECT 19.456 0.000 19.608 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 63.536 0.000 63.688 0.152 ;
+        RECT 19.456 0.000 19.608 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 63.536 0.000 63.688 0.152 ;
+        RECT 19.456 0.000 19.608 0.152 ;
     END
   END I2[10]
 
@@ -1233,19 +1191,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 63.840 0.000 63.992 0.152 ;
+        RECT 19.760 0.000 19.912 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 63.840 0.000 63.992 0.152 ;
+        RECT 19.760 0.000 19.912 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 63.840 0.000 63.992 0.152 ;
+        RECT 19.760 0.000 19.912 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 63.840 0.000 63.992 0.152 ;
+        RECT 19.760 0.000 19.912 0.152 ;
     END
   END I2[11]
 
@@ -1254,19 +1212,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 75.392 0.000 75.544 0.152 ;
+        RECT 21.888 0.000 22.040 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 75.392 0.000 75.544 0.152 ;
+        RECT 21.888 0.000 22.040 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 75.392 0.000 75.544 0.152 ;
+        RECT 21.888 0.000 22.040 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 75.392 0.000 75.544 0.152 ;
+        RECT 21.888 0.000 22.040 0.152 ;
     END
   END I2[12]
 
@@ -1275,19 +1233,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 75.696 0.000 75.848 0.152 ;
+        RECT 22.192 0.000 22.344 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 75.696 0.000 75.848 0.152 ;
+        RECT 22.192 0.000 22.344 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 75.696 0.000 75.848 0.152 ;
+        RECT 22.192 0.000 22.344 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 75.696 0.000 75.848 0.152 ;
+        RECT 22.192 0.000 22.344 0.152 ;
     END
   END I2[13]
 
@@ -1296,19 +1254,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 76.000 0.000 76.152 0.152 ;
+        RECT 22.496 0.000 22.648 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 76.000 0.000 76.152 0.152 ;
+        RECT 22.496 0.000 22.648 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 76.000 0.000 76.152 0.152 ;
+        RECT 22.496 0.000 22.648 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 76.000 0.000 76.152 0.152 ;
+        RECT 22.496 0.000 22.648 0.152 ;
     END
   END I2[14]
 
@@ -1317,19 +1275,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 76.304 0.000 76.456 0.152 ;
+        RECT 22.800 0.000 22.952 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 76.304 0.000 76.456 0.152 ;
+        RECT 22.800 0.000 22.952 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 76.304 0.000 76.456 0.152 ;
+        RECT 22.800 0.000 22.952 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 76.304 0.000 76.456 0.152 ;
+        RECT 22.800 0.000 22.952 0.152 ;
     END
   END I2[15]
 
@@ -1338,19 +1296,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 87.856 0.000 88.008 0.152 ;
+        RECT 24.928 0.000 25.080 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 87.856 0.000 88.008 0.152 ;
+        RECT 24.928 0.000 25.080 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 87.856 0.000 88.008 0.152 ;
+        RECT 24.928 0.000 25.080 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 87.856 0.000 88.008 0.152 ;
+        RECT 24.928 0.000 25.080 0.152 ;
     END
   END I2[16]
 
@@ -1359,19 +1317,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 88.160 0.000 88.312 0.152 ;
+        RECT 25.232 0.000 25.384 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 88.160 0.000 88.312 0.152 ;
+        RECT 25.232 0.000 25.384 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 88.160 0.000 88.312 0.152 ;
+        RECT 25.232 0.000 25.384 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 88.160 0.000 88.312 0.152 ;
+        RECT 25.232 0.000 25.384 0.152 ;
     END
   END I2[17]
 
@@ -1380,19 +1338,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 88.464 0.000 88.616 0.152 ;
+        RECT 25.536 0.000 25.688 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 88.464 0.000 88.616 0.152 ;
+        RECT 25.536 0.000 25.688 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 88.464 0.000 88.616 0.152 ;
+        RECT 25.536 0.000 25.688 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 88.464 0.000 88.616 0.152 ;
+        RECT 25.536 0.000 25.688 0.152 ;
     END
   END I2[18]
 
@@ -1401,19 +1359,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 88.768 0.000 88.920 0.152 ;
+        RECT 25.840 0.000 25.992 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 88.768 0.000 88.920 0.152 ;
+        RECT 25.840 0.000 25.992 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 88.768 0.000 88.920 0.152 ;
+        RECT 25.840 0.000 25.992 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 88.768 0.000 88.920 0.152 ;
+        RECT 25.840 0.000 25.992 0.152 ;
     END
   END I2[19]
 
@@ -1422,19 +1380,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 100.320 0.000 100.472 0.152 ;
+        RECT 27.968 0.000 28.120 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 100.320 0.000 100.472 0.152 ;
+        RECT 27.968 0.000 28.120 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 100.320 0.000 100.472 0.152 ;
+        RECT 27.968 0.000 28.120 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 100.320 0.000 100.472 0.152 ;
+        RECT 27.968 0.000 28.120 0.152 ;
     END
   END I2[20]
 
@@ -1443,19 +1401,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 100.624 0.000 100.776 0.152 ;
+        RECT 28.272 0.000 28.424 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 100.624 0.000 100.776 0.152 ;
+        RECT 28.272 0.000 28.424 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 100.624 0.000 100.776 0.152 ;
+        RECT 28.272 0.000 28.424 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 100.624 0.000 100.776 0.152 ;
+        RECT 28.272 0.000 28.424 0.152 ;
     END
   END I2[21]
 
@@ -1464,19 +1422,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 100.928 0.000 101.080 0.152 ;
+        RECT 28.576 0.000 28.728 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 100.928 0.000 101.080 0.152 ;
+        RECT 28.576 0.000 28.728 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 100.928 0.000 101.080 0.152 ;
+        RECT 28.576 0.000 28.728 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 100.928 0.000 101.080 0.152 ;
+        RECT 28.576 0.000 28.728 0.152 ;
     END
   END I2[22]
 
@@ -1485,19 +1443,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 101.232 0.000 101.384 0.152 ;
+        RECT 28.880 0.000 29.032 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 101.232 0.000 101.384 0.152 ;
+        RECT 28.880 0.000 29.032 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 101.232 0.000 101.384 0.152 ;
+        RECT 28.880 0.000 29.032 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 101.232 0.000 101.384 0.152 ;
+        RECT 28.880 0.000 29.032 0.152 ;
     END
   END I2[23]
 
@@ -1506,19 +1464,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 112.784 0.000 112.936 0.152 ;
+        RECT 31.008 0.000 31.160 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 112.784 0.000 112.936 0.152 ;
+        RECT 31.008 0.000 31.160 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 112.784 0.000 112.936 0.152 ;
+        RECT 31.008 0.000 31.160 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 112.784 0.000 112.936 0.152 ;
+        RECT 31.008 0.000 31.160 0.152 ;
     END
   END I2[24]
 
@@ -1527,19 +1485,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 113.088 0.000 113.240 0.152 ;
+        RECT 31.312 0.000 31.464 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 113.088 0.000 113.240 0.152 ;
+        RECT 31.312 0.000 31.464 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 113.088 0.000 113.240 0.152 ;
+        RECT 31.312 0.000 31.464 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 113.088 0.000 113.240 0.152 ;
+        RECT 31.312 0.000 31.464 0.152 ;
     END
   END I2[25]
 
@@ -1548,19 +1506,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 113.392 0.000 113.544 0.152 ;
+        RECT 31.616 0.000 31.768 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 113.392 0.000 113.544 0.152 ;
+        RECT 31.616 0.000 31.768 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 113.392 0.000 113.544 0.152 ;
+        RECT 31.616 0.000 31.768 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 113.392 0.000 113.544 0.152 ;
+        RECT 31.616 0.000 31.768 0.152 ;
     END
   END I2[26]
 
@@ -1569,19 +1527,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 113.696 0.000 113.848 0.152 ;
+        RECT 31.920 0.000 32.072 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 113.696 0.000 113.848 0.152 ;
+        RECT 31.920 0.000 32.072 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 113.696 0.000 113.848 0.152 ;
+        RECT 31.920 0.000 32.072 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 113.696 0.000 113.848 0.152 ;
+        RECT 31.920 0.000 32.072 0.152 ;
     END
   END I2[27]
 
@@ -1590,19 +1548,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 125.248 0.000 125.400 0.152 ;
+        RECT 34.048 0.000 34.200 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 125.248 0.000 125.400 0.152 ;
+        RECT 34.048 0.000 34.200 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 125.248 0.000 125.400 0.152 ;
+        RECT 34.048 0.000 34.200 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 125.248 0.000 125.400 0.152 ;
+        RECT 34.048 0.000 34.200 0.152 ;
     END
   END I2[28]
 
@@ -1611,19 +1569,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 125.552 0.000 125.704 0.152 ;
+        RECT 34.352 0.000 34.504 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 125.552 0.000 125.704 0.152 ;
+        RECT 34.352 0.000 34.504 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 125.552 0.000 125.704 0.152 ;
+        RECT 34.352 0.000 34.504 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 125.552 0.000 125.704 0.152 ;
+        RECT 34.352 0.000 34.504 0.152 ;
     END
   END I2[29]
 
@@ -1632,19 +1590,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 125.856 0.000 126.008 0.152 ;
+        RECT 34.656 0.000 34.808 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 125.856 0.000 126.008 0.152 ;
+        RECT 34.656 0.000 34.808 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 125.856 0.000 126.008 0.152 ;
+        RECT 34.656 0.000 34.808 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 125.856 0.000 126.008 0.152 ;
+        RECT 34.656 0.000 34.808 0.152 ;
     END
   END I2[30]
 
@@ -1653,19 +1611,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 126.160 0.000 126.312 0.152 ;
+        RECT 34.960 0.000 35.112 0.152 ;
     END
     PORT
       LAYER M3 ;
-        RECT 126.160 0.000 126.312 0.152 ;
+        RECT 34.960 0.000 35.112 0.152 ;
     END
     PORT
       LAYER M4 ;
-        RECT 126.160 0.000 126.312 0.152 ;
+        RECT 34.960 0.000 35.112 0.152 ;
     END
     PORT
       LAYER M5 ;
-        RECT 126.160 0.000 126.312 0.152 ;
+        RECT 34.960 0.000 35.112 0.152 ;
     END
   END I2[31]
 
@@ -1674,19 +1632,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 0.000 58.520 0.152 58.672 ;
+        RECT 0.000 55.328 0.152 55.480 ;
     END
     PORT
       LAYER M3 ;
-        RECT 0.000 58.520 0.152 58.672 ;
+        RECT 0.000 55.328 0.152 55.480 ;
     END
     PORT
       LAYER M4 ;
-        RECT 0.000 58.520 0.152 58.672 ;
+        RECT 0.000 55.328 0.152 55.480 ;
     END
     PORT
       LAYER M5 ;
-        RECT 0.000 58.520 0.152 58.672 ;
+        RECT 0.000 55.328 0.152 55.480 ;
     END
   END A2[0]
 
@@ -1695,19 +1653,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 0.000 54.872 0.152 55.024 ;
+        RECT 0.000 51.680 0.152 51.832 ;
     END
     PORT
       LAYER M3 ;
-        RECT 0.000 54.872 0.152 55.024 ;
+        RECT 0.000 51.680 0.152 51.832 ;
     END
     PORT
       LAYER M4 ;
-        RECT 0.000 54.872 0.152 55.024 ;
+        RECT 0.000 51.680 0.152 51.832 ;
     END
     PORT
       LAYER M5 ;
-        RECT 0.000 54.872 0.152 55.024 ;
+        RECT 0.000 51.680 0.152 51.832 ;
     END
   END A2[1]
 
@@ -1716,19 +1674,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 0.000 51.224 0.152 51.376 ;
+        RECT 0.000 48.032 0.152 48.184 ;
     END
     PORT
       LAYER M3 ;
-        RECT 0.000 51.224 0.152 51.376 ;
+        RECT 0.000 48.032 0.152 48.184 ;
     END
     PORT
       LAYER M4 ;
-        RECT 0.000 51.224 0.152 51.376 ;
+        RECT 0.000 48.032 0.152 48.184 ;
     END
     PORT
       LAYER M5 ;
-        RECT 0.000 51.224 0.152 51.376 ;
+        RECT 0.000 48.032 0.152 48.184 ;
     END
   END A2[2]
 
@@ -1737,19 +1695,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 0.000 47.576 0.152 47.728 ;
+        RECT 0.000 44.384 0.152 44.536 ;
     END
     PORT
       LAYER M3 ;
-        RECT 0.000 47.576 0.152 47.728 ;
+        RECT 0.000 44.384 0.152 44.536 ;
     END
     PORT
       LAYER M4 ;
-        RECT 0.000 47.576 0.152 47.728 ;
+        RECT 0.000 44.384 0.152 44.536 ;
     END
     PORT
       LAYER M5 ;
-        RECT 0.000 47.576 0.152 47.728 ;
+        RECT 0.000 44.384 0.152 44.536 ;
     END
   END A2[3]
 
@@ -1758,19 +1716,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 0.000 43.928 0.152 44.080 ;
+        RECT 0.000 40.736 0.152 40.888 ;
     END
     PORT
       LAYER M3 ;
-        RECT 0.000 43.928 0.152 44.080 ;
+        RECT 0.000 40.736 0.152 40.888 ;
     END
     PORT
       LAYER M4 ;
-        RECT 0.000 43.928 0.152 44.080 ;
+        RECT 0.000 40.736 0.152 40.888 ;
     END
     PORT
       LAYER M5 ;
-        RECT 0.000 43.928 0.152 44.080 ;
+        RECT 0.000 40.736 0.152 40.888 ;
     END
   END A2[4]
 
@@ -1779,19 +1737,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 0.000 40.280 0.152 40.432 ;
+        RECT 0.000 37.088 0.152 37.240 ;
     END
     PORT
       LAYER M3 ;
-        RECT 0.000 40.280 0.152 40.432 ;
+        RECT 0.000 37.088 0.152 37.240 ;
     END
     PORT
       LAYER M4 ;
-        RECT 0.000 40.280 0.152 40.432 ;
+        RECT 0.000 37.088 0.152 37.240 ;
     END
     PORT
       LAYER M5 ;
-        RECT 0.000 40.280 0.152 40.432 ;
+        RECT 0.000 37.088 0.152 37.240 ;
     END
   END A2[5]
 
@@ -1800,19 +1758,19 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 0.000 36.632 0.152 36.784 ;
+        RECT 0.000 33.440 0.152 33.592 ;
     END
     PORT
       LAYER M3 ;
-        RECT 0.000 36.632 0.152 36.784 ;
+        RECT 0.000 33.440 0.152 33.592 ;
     END
     PORT
       LAYER M4 ;
-        RECT 0.000 36.632 0.152 36.784 ;
+        RECT 0.000 33.440 0.152 33.592 ;
     END
     PORT
       LAYER M5 ;
-        RECT 0.000 36.632 0.152 36.784 ;
+        RECT 0.000 33.440 0.152 33.592 ;
     END
   END A2[6]
 
@@ -1821,82 +1779,40 @@ MACRO SRAM1R1W1024x32
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 0.000 32.984 0.152 33.136 ;
+        RECT 0.000 29.792 0.152 29.944 ;
     END
     PORT
       LAYER M3 ;
-        RECT 0.000 32.984 0.152 33.136 ;
+        RECT 0.000 29.792 0.152 29.944 ;
     END
     PORT
       LAYER M4 ;
-        RECT 0.000 32.984 0.152 33.136 ;
+        RECT 0.000 29.792 0.152 29.944 ;
     END
     PORT
       LAYER M5 ;
-        RECT 0.000 32.984 0.152 33.136 ;
+        RECT 0.000 29.792 0.152 29.944 ;
     END
   END A2[7]
-
-  PIN A2[8]
-    DIRECTION INPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER M2 ;
-        RECT 0.000 29.336 0.152 29.488 ;
-    END
-    PORT
-      LAYER M3 ;
-        RECT 0.000 29.336 0.152 29.488 ;
-    END
-    PORT
-      LAYER M4 ;
-        RECT 0.000 29.336 0.152 29.488 ;
-    END
-    PORT
-      LAYER M5 ;
-        RECT 0.000 29.336 0.152 29.488 ;
-    END
-  END A2[8]
-
-  PIN A2[9]
-    DIRECTION INPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER M2 ;
-        RECT 0.000 25.688 0.152 25.840 ;
-    END
-    PORT
-      LAYER M3 ;
-        RECT 0.000 25.688 0.152 25.840 ;
-    END
-    PORT
-      LAYER M4 ;
-        RECT 0.000 25.688 0.152 25.840 ;
-    END
-    PORT
-      LAYER M5 ;
-        RECT 0.000 25.688 0.152 25.840 ;
-    END
-  END A2[9]
 
   PIN WEB2
     DIRECTION INPUT ;
     USE SIGNAL ;
     PORT
       LAYER M2 ;
-        RECT 0.000 16.720 0.152 16.872 ;
+        RECT 0.000 15.808 0.152 15.960 ;
     END
     PORT
       LAYER M3 ;
-        RECT 0.000 16.720 0.152 16.872 ;
+        RECT 0.000 15.808 0.152 15.960 ;
     END
     PORT
       LAYER M4 ;
-        RECT 0.000 16.720 0.152 16.872 ;
+        RECT 0.000 15.808 0.152 15.960 ;
     END
     PORT
       LAYER M5 ;
-        RECT 0.000 16.720 0.152 16.872 ;
+        RECT 0.000 15.808 0.152 15.960 ;
     END
   END WEB2
 
@@ -1905,15 +1821,15 @@ MACRO SRAM1R1W1024x32
     USE POWER ;
     PORT
       LAYER M2 ;
-        RECT 5.195 64.880 7.195 66.880 ;
+        RECT 5.195 61.232 7.195 63.232 ;
     END
     PORT
       LAYER M3 ;
-        RECT 5.195 64.880 7.195 66.880 ;
+        RECT 5.195 61.232 7.195 63.232 ;
     END
     PORT
       LAYER M5 ;
-        RECT 5.195 64.880 7.195 66.880 ;
+        RECT 5.195 61.232 7.195 63.232 ;
     END
   END VDD
 
@@ -1922,223 +1838,207 @@ MACRO SRAM1R1W1024x32
     USE GROUND ;
     PORT
       LAYER M2 ;
-        RECT 7.915 64.880 9.915 66.880 ;
+        RECT 7.915 61.232 9.915 63.232 ;
     END
     PORT
       LAYER M3 ;
-        RECT 7.915 64.880 9.915 66.880 ;
+        RECT 7.915 61.232 9.915 63.232 ;
     END
     PORT
       LAYER M5 ;
-        RECT 7.915 64.880 9.915 66.880 ;
+        RECT 7.915 61.232 9.915 63.232 ;
     END
   END VSS
 
   OBS
     LAYER M2 ;
-      RECT 263.872 0.000 278.464 0.304 ;
-      RECT 252.320 0.000 263.416 0.304 ;
-      RECT 240.768 0.000 251.864 0.304 ;
-      RECT 229.216 0.000 240.312 0.304 ;
-      RECT 216.752 0.000 227.848 0.304 ;
-      RECT 204.288 0.000 215.384 0.304 ;
-      RECT 191.824 0.000 202.920 0.304 ;
-      RECT 179.360 0.000 190.456 0.304 ;
-      RECT 166.896 0.000 177.992 0.304 ;
-      RECT 154.432 0.000 165.528 0.304 ;
-      RECT 141.968 0.000 153.064 0.304 ;
-      RECT 278.160 58.824 278.464 64.728 ;
-      RECT 278.160 55.176 278.464 58.368 ;
-      RECT 278.160 51.528 278.464 54.720 ;
-      RECT 278.160 47.880 278.464 51.072 ;
-      RECT 278.160 44.232 278.464 47.424 ;
-      RECT 278.160 40.584 278.464 43.776 ;
-      RECT 278.160 36.936 278.464 40.128 ;
-      RECT 278.160 33.288 278.464 36.480 ;
-      RECT 278.160 29.640 278.464 32.832 ;
-      RECT 278.160 25.992 278.464 29.184 ;
-      RECT 278.160 17.024 278.464 25.536 ;
-      RECT 278.160 0.304 278.464 16.568 ;
-      RECT 0.000 0.000 14.744 0.304 ;
-      RECT 15.200 0.000 26.296 0.304 ;
-      RECT 26.752 0.000 37.848 0.304 ;
-      RECT 39.216 0.000 50.312 0.304 ;
-      RECT 51.680 0.000 62.776 0.304 ;
-      RECT 64.144 0.000 75.240 0.304 ;
-      RECT 76.608 0.000 87.704 0.304 ;
-      RECT 89.072 0.000 100.168 0.304 ;
-      RECT 101.536 0.000 112.632 0.304 ;
-      RECT 114.000 0.000 125.096 0.304 ;
-      RECT 126.464 0.000 140.600 0.304 ;
-      RECT 0.000 58.824 0.304 64.728 ;
-      RECT 0.000 55.176 0.304 58.368 ;
-      RECT 0.000 51.528 0.304 54.720 ;
-      RECT 0.000 47.880 0.304 51.072 ;
-      RECT 0.000 44.232 0.304 47.424 ;
-      RECT 0.000 40.584 0.304 43.776 ;
-      RECT 0.000 36.936 0.304 40.128 ;
-      RECT 0.000 33.288 0.304 36.480 ;
-      RECT 0.000 29.640 0.304 32.832 ;
-      RECT 0.000 25.992 0.304 29.184 ;
-      RECT 0.000 17.024 0.304 25.536 ;
-      RECT 0.000 0.304 0.304 16.568 ;
-      RECT 0.000 64.728 5.043 66.880 ;
-      RECT 7.355 64.728 7.763 66.880 ;
-      RECT 10.067 64.728 278.464 66.880 ;
-      RECT 0.304 0.304 278.160 64.728 ;
+      RECT 65.968 0.000 74.176 0.304 ;
+      RECT 63.840 0.000 65.512 0.304 ;
+      RECT 61.712 0.000 63.384 0.304 ;
+      RECT 59.584 0.000 61.256 0.304 ;
+      RECT 56.544 0.000 58.216 0.304 ;
+      RECT 53.504 0.000 55.176 0.304 ;
+      RECT 50.464 0.000 52.136 0.304 ;
+      RECT 47.424 0.000 49.096 0.304 ;
+      RECT 44.384 0.000 46.056 0.304 ;
+      RECT 41.344 0.000 43.016 0.304 ;
+      RECT 38.304 0.000 39.976 0.304 ;
+      RECT 73.872 55.632 74.176 61.080 ;
+      RECT 73.872 51.984 74.176 55.176 ;
+      RECT 73.872 48.336 74.176 51.528 ;
+      RECT 73.872 44.688 74.176 47.880 ;
+      RECT 73.872 41.040 74.176 44.232 ;
+      RECT 73.872 37.392 74.176 40.584 ;
+      RECT 73.872 33.744 74.176 36.936 ;
+      RECT 73.872 30.096 74.176 33.288 ;
+      RECT 73.872 16.112 74.176 29.640 ;
+      RECT 73.872 0.304 74.176 15.656 ;
+      RECT 0.000 0.000 8.360 0.304 ;
+      RECT 8.816 0.000 10.488 0.304 ;
+      RECT 10.944 0.000 12.616 0.304 ;
+      RECT 13.984 0.000 15.656 0.304 ;
+      RECT 17.024 0.000 18.696 0.304 ;
+      RECT 20.064 0.000 21.736 0.304 ;
+      RECT 23.104 0.000 24.776 0.304 ;
+      RECT 26.144 0.000 27.816 0.304 ;
+      RECT 29.184 0.000 30.856 0.304 ;
+      RECT 32.224 0.000 33.896 0.304 ;
+      RECT 35.264 0.000 36.936 0.304 ;
+      RECT 0.000 55.632 0.304 61.080 ;
+      RECT 0.000 51.984 0.304 55.176 ;
+      RECT 0.000 48.336 0.304 51.528 ;
+      RECT 0.000 44.688 0.304 47.880 ;
+      RECT 0.000 41.040 0.304 44.232 ;
+      RECT 0.000 37.392 0.304 40.584 ;
+      RECT 0.000 33.744 0.304 36.936 ;
+      RECT 0.000 30.096 0.304 33.288 ;
+      RECT 0.000 16.112 0.304 29.640 ;
+      RECT 0.000 0.304 0.304 15.656 ;
+      RECT 0.000 61.080 5.043 63.232 ;
+      RECT 7.355 61.080 7.763 63.232 ;
+      RECT 10.067 61.080 74.176 63.232 ;
+      RECT 0.304 0.304 73.872 61.080 ;
     LAYER M3 ;
-      RECT 263.872 0.000 278.464 0.304 ;
-      RECT 252.320 0.000 263.416 0.304 ;
-      RECT 240.768 0.000 251.864 0.304 ;
-      RECT 229.216 0.000 240.312 0.304 ;
-      RECT 216.752 0.000 227.848 0.304 ;
-      RECT 204.288 0.000 215.384 0.304 ;
-      RECT 191.824 0.000 202.920 0.304 ;
-      RECT 179.360 0.000 190.456 0.304 ;
-      RECT 166.896 0.000 177.992 0.304 ;
-      RECT 154.432 0.000 165.528 0.304 ;
-      RECT 141.968 0.000 153.064 0.304 ;
-      RECT 278.160 58.824 278.464 64.728 ;
-      RECT 278.160 55.176 278.464 58.368 ;
-      RECT 278.160 51.528 278.464 54.720 ;
-      RECT 278.160 47.880 278.464 51.072 ;
-      RECT 278.160 44.232 278.464 47.424 ;
-      RECT 278.160 40.584 278.464 43.776 ;
-      RECT 278.160 36.936 278.464 40.128 ;
-      RECT 278.160 33.288 278.464 36.480 ;
-      RECT 278.160 29.640 278.464 32.832 ;
-      RECT 278.160 25.992 278.464 29.184 ;
-      RECT 278.160 17.024 278.464 25.536 ;
-      RECT 278.160 0.304 278.464 16.568 ;
-      RECT 0.000 0.000 14.744 0.304 ;
-      RECT 15.200 0.000 26.296 0.304 ;
-      RECT 26.752 0.000 37.848 0.304 ;
-      RECT 39.216 0.000 50.312 0.304 ;
-      RECT 51.680 0.000 62.776 0.304 ;
-      RECT 64.144 0.000 75.240 0.304 ;
-      RECT 76.608 0.000 87.704 0.304 ;
-      RECT 89.072 0.000 100.168 0.304 ;
-      RECT 101.536 0.000 112.632 0.304 ;
-      RECT 114.000 0.000 125.096 0.304 ;
-      RECT 126.464 0.000 140.600 0.304 ;
-      RECT 0.000 58.824 0.304 64.728 ;
-      RECT 0.000 55.176 0.304 58.368 ;
-      RECT 0.000 51.528 0.304 54.720 ;
-      RECT 0.000 47.880 0.304 51.072 ;
-      RECT 0.000 44.232 0.304 47.424 ;
-      RECT 0.000 40.584 0.304 43.776 ;
-      RECT 0.000 36.936 0.304 40.128 ;
-      RECT 0.000 33.288 0.304 36.480 ;
-      RECT 0.000 29.640 0.304 32.832 ;
-      RECT 0.000 25.992 0.304 29.184 ;
-      RECT 0.000 17.024 0.304 25.536 ;
-      RECT 0.000 0.304 0.304 16.568 ;
-      RECT 0.000 64.728 5.043 66.880 ;
-      RECT 7.355 64.728 7.763 66.880 ;
-      RECT 10.067 64.728 278.464 66.880 ;
-      RECT 0.304 0.304 278.160 64.728 ;
+      RECT 65.968 0.000 74.176 0.304 ;
+      RECT 63.840 0.000 65.512 0.304 ;
+      RECT 61.712 0.000 63.384 0.304 ;
+      RECT 59.584 0.000 61.256 0.304 ;
+      RECT 56.544 0.000 58.216 0.304 ;
+      RECT 53.504 0.000 55.176 0.304 ;
+      RECT 50.464 0.000 52.136 0.304 ;
+      RECT 47.424 0.000 49.096 0.304 ;
+      RECT 44.384 0.000 46.056 0.304 ;
+      RECT 41.344 0.000 43.016 0.304 ;
+      RECT 38.304 0.000 39.976 0.304 ;
+      RECT 73.872 55.632 74.176 61.080 ;
+      RECT 73.872 51.984 74.176 55.176 ;
+      RECT 73.872 48.336 74.176 51.528 ;
+      RECT 73.872 44.688 74.176 47.880 ;
+      RECT 73.872 41.040 74.176 44.232 ;
+      RECT 73.872 37.392 74.176 40.584 ;
+      RECT 73.872 33.744 74.176 36.936 ;
+      RECT 73.872 30.096 74.176 33.288 ;
+      RECT 73.872 16.112 74.176 29.640 ;
+      RECT 73.872 0.304 74.176 15.656 ;
+      RECT 0.000 0.000 8.360 0.304 ;
+      RECT 8.816 0.000 10.488 0.304 ;
+      RECT 10.944 0.000 12.616 0.304 ;
+      RECT 13.984 0.000 15.656 0.304 ;
+      RECT 17.024 0.000 18.696 0.304 ;
+      RECT 20.064 0.000 21.736 0.304 ;
+      RECT 23.104 0.000 24.776 0.304 ;
+      RECT 26.144 0.000 27.816 0.304 ;
+      RECT 29.184 0.000 30.856 0.304 ;
+      RECT 32.224 0.000 33.896 0.304 ;
+      RECT 35.264 0.000 36.936 0.304 ;
+      RECT 0.000 55.632 0.304 61.080 ;
+      RECT 0.000 51.984 0.304 55.176 ;
+      RECT 0.000 48.336 0.304 51.528 ;
+      RECT 0.000 44.688 0.304 47.880 ;
+      RECT 0.000 41.040 0.304 44.232 ;
+      RECT 0.000 37.392 0.304 40.584 ;
+      RECT 0.000 33.744 0.304 36.936 ;
+      RECT 0.000 30.096 0.304 33.288 ;
+      RECT 0.000 16.112 0.304 29.640 ;
+      RECT 0.000 0.304 0.304 15.656 ;
+      RECT 0.000 61.080 5.043 63.232 ;
+      RECT 7.355 61.080 7.763 63.232 ;
+      RECT 10.067 61.080 74.176 63.232 ;
+      RECT 0.304 0.304 73.872 61.080 ;
     LAYER M4 ;
-      RECT 263.872 0.000 278.464 0.304 ;
-      RECT 252.320 0.000 263.416 0.304 ;
-      RECT 240.768 0.000 251.864 0.304 ;
-      RECT 229.216 0.000 240.312 0.304 ;
-      RECT 216.752 0.000 227.848 0.304 ;
-      RECT 204.288 0.000 215.384 0.304 ;
-      RECT 191.824 0.000 202.920 0.304 ;
-      RECT 179.360 0.000 190.456 0.304 ;
-      RECT 166.896 0.000 177.992 0.304 ;
-      RECT 154.432 0.000 165.528 0.304 ;
-      RECT 141.968 0.000 153.064 0.304 ;
-      RECT 278.160 58.824 278.464 64.728 ;
-      RECT 278.160 55.176 278.464 58.368 ;
-      RECT 278.160 51.528 278.464 54.720 ;
-      RECT 278.160 47.880 278.464 51.072 ;
-      RECT 278.160 44.232 278.464 47.424 ;
-      RECT 278.160 40.584 278.464 43.776 ;
-      RECT 278.160 36.936 278.464 40.128 ;
-      RECT 278.160 33.288 278.464 36.480 ;
-      RECT 278.160 29.640 278.464 32.832 ;
-      RECT 278.160 25.992 278.464 29.184 ;
-      RECT 278.160 17.024 278.464 25.536 ;
-      RECT 278.160 0.304 278.464 16.568 ;
-      RECT 0.000 0.000 14.744 0.304 ;
-      RECT 15.200 0.000 26.296 0.304 ;
-      RECT 26.752 0.000 37.848 0.304 ;
-      RECT 39.216 0.000 50.312 0.304 ;
-      RECT 51.680 0.000 62.776 0.304 ;
-      RECT 64.144 0.000 75.240 0.304 ;
-      RECT 76.608 0.000 87.704 0.304 ;
-      RECT 89.072 0.000 100.168 0.304 ;
-      RECT 101.536 0.000 112.632 0.304 ;
-      RECT 114.000 0.000 125.096 0.304 ;
-      RECT 126.464 0.000 140.600 0.304 ;
-      RECT 0.000 58.824 0.304 64.728 ;
-      RECT 0.000 55.176 0.304 58.368 ;
-      RECT 0.000 51.528 0.304 54.720 ;
-      RECT 0.000 47.880 0.304 51.072 ;
-      RECT 0.000 44.232 0.304 47.424 ;
-      RECT 0.000 40.584 0.304 43.776 ;
-      RECT 0.000 36.936 0.304 40.128 ;
-      RECT 0.000 33.288 0.304 36.480 ;
-      RECT 0.000 29.640 0.304 32.832 ;
-      RECT 0.000 25.992 0.304 29.184 ;
-      RECT 0.000 17.024 0.304 25.536 ;
-      RECT 0.000 0.304 0.304 16.568 ;
-      RECT 0.000 64.728 5.043 66.880 ;
-      RECT 7.355 64.728 7.763 66.880 ;
-      RECT 10.067 64.728 278.464 66.880 ;
-      RECT 0.304 0.304 278.160 64.728 ;
+      RECT 65.968 0.000 74.176 0.304 ;
+      RECT 63.840 0.000 65.512 0.304 ;
+      RECT 61.712 0.000 63.384 0.304 ;
+      RECT 59.584 0.000 61.256 0.304 ;
+      RECT 56.544 0.000 58.216 0.304 ;
+      RECT 53.504 0.000 55.176 0.304 ;
+      RECT 50.464 0.000 52.136 0.304 ;
+      RECT 47.424 0.000 49.096 0.304 ;
+      RECT 44.384 0.000 46.056 0.304 ;
+      RECT 41.344 0.000 43.016 0.304 ;
+      RECT 38.304 0.000 39.976 0.304 ;
+      RECT 73.872 55.632 74.176 61.080 ;
+      RECT 73.872 51.984 74.176 55.176 ;
+      RECT 73.872 48.336 74.176 51.528 ;
+      RECT 73.872 44.688 74.176 47.880 ;
+      RECT 73.872 41.040 74.176 44.232 ;
+      RECT 73.872 37.392 74.176 40.584 ;
+      RECT 73.872 33.744 74.176 36.936 ;
+      RECT 73.872 30.096 74.176 33.288 ;
+      RECT 73.872 16.112 74.176 29.640 ;
+      RECT 73.872 0.304 74.176 15.656 ;
+      RECT 0.000 0.000 8.360 0.304 ;
+      RECT 8.816 0.000 10.488 0.304 ;
+      RECT 10.944 0.000 12.616 0.304 ;
+      RECT 13.984 0.000 15.656 0.304 ;
+      RECT 17.024 0.000 18.696 0.304 ;
+      RECT 20.064 0.000 21.736 0.304 ;
+      RECT 23.104 0.000 24.776 0.304 ;
+      RECT 26.144 0.000 27.816 0.304 ;
+      RECT 29.184 0.000 30.856 0.304 ;
+      RECT 32.224 0.000 33.896 0.304 ;
+      RECT 35.264 0.000 36.936 0.304 ;
+      RECT 0.000 55.632 0.304 61.080 ;
+      RECT 0.000 51.984 0.304 55.176 ;
+      RECT 0.000 48.336 0.304 51.528 ;
+      RECT 0.000 44.688 0.304 47.880 ;
+      RECT 0.000 41.040 0.304 44.232 ;
+      RECT 0.000 37.392 0.304 40.584 ;
+      RECT 0.000 33.744 0.304 36.936 ;
+      RECT 0.000 30.096 0.304 33.288 ;
+      RECT 0.000 16.112 0.304 29.640 ;
+      RECT 0.000 0.304 0.304 15.656 ;
+      RECT 0.000 61.080 5.043 63.232 ;
+      RECT 7.355 61.080 7.763 63.232 ;
+      RECT 10.067 61.080 74.176 63.232 ;
+      RECT 0.304 0.304 73.872 61.080 ;
     LAYER M5 ;
-      RECT 263.872 0.000 278.464 0.304 ;
-      RECT 252.320 0.000 263.416 0.304 ;
-      RECT 240.768 0.000 251.864 0.304 ;
-      RECT 229.216 0.000 240.312 0.304 ;
-      RECT 216.752 0.000 227.848 0.304 ;
-      RECT 204.288 0.000 215.384 0.304 ;
-      RECT 191.824 0.000 202.920 0.304 ;
-      RECT 179.360 0.000 190.456 0.304 ;
-      RECT 166.896 0.000 177.992 0.304 ;
-      RECT 154.432 0.000 165.528 0.304 ;
-      RECT 141.968 0.000 153.064 0.304 ;
-      RECT 278.160 58.824 278.464 64.728 ;
-      RECT 278.160 55.176 278.464 58.368 ;
-      RECT 278.160 51.528 278.464 54.720 ;
-      RECT 278.160 47.880 278.464 51.072 ;
-      RECT 278.160 44.232 278.464 47.424 ;
-      RECT 278.160 40.584 278.464 43.776 ;
-      RECT 278.160 36.936 278.464 40.128 ;
-      RECT 278.160 33.288 278.464 36.480 ;
-      RECT 278.160 29.640 278.464 32.832 ;
-      RECT 278.160 25.992 278.464 29.184 ;
-      RECT 278.160 17.024 278.464 25.536 ;
-      RECT 278.160 0.304 278.464 16.568 ;
-      RECT 0.000 0.000 14.744 0.304 ;
-      RECT 15.200 0.000 26.296 0.304 ;
-      RECT 26.752 0.000 37.848 0.304 ;
-      RECT 39.216 0.000 50.312 0.304 ;
-      RECT 51.680 0.000 62.776 0.304 ;
-      RECT 64.144 0.000 75.240 0.304 ;
-      RECT 76.608 0.000 87.704 0.304 ;
-      RECT 89.072 0.000 100.168 0.304 ;
-      RECT 101.536 0.000 112.632 0.304 ;
-      RECT 114.000 0.000 125.096 0.304 ;
-      RECT 126.464 0.000 140.600 0.304 ;
-      RECT 0.000 58.824 0.304 64.728 ;
-      RECT 0.000 55.176 0.304 58.368 ;
-      RECT 0.000 51.528 0.304 54.720 ;
-      RECT 0.000 47.880 0.304 51.072 ;
-      RECT 0.000 44.232 0.304 47.424 ;
-      RECT 0.000 40.584 0.304 43.776 ;
-      RECT 0.000 36.936 0.304 40.128 ;
-      RECT 0.000 33.288 0.304 36.480 ;
-      RECT 0.000 29.640 0.304 32.832 ;
-      RECT 0.000 25.992 0.304 29.184 ;
-      RECT 0.000 17.024 0.304 25.536 ;
-      RECT 0.000 0.304 0.304 16.568 ;
-      RECT 0.000 64.728 5.043 66.880 ;
-      RECT 7.355 64.728 7.763 66.880 ;
-      RECT 10.067 64.728 278.464 66.880 ;
-      RECT 0.304 0.304 278.160 64.728 ;
+      RECT 65.968 0.000 74.176 0.304 ;
+      RECT 63.840 0.000 65.512 0.304 ;
+      RECT 61.712 0.000 63.384 0.304 ;
+      RECT 59.584 0.000 61.256 0.304 ;
+      RECT 56.544 0.000 58.216 0.304 ;
+      RECT 53.504 0.000 55.176 0.304 ;
+      RECT 50.464 0.000 52.136 0.304 ;
+      RECT 47.424 0.000 49.096 0.304 ;
+      RECT 44.384 0.000 46.056 0.304 ;
+      RECT 41.344 0.000 43.016 0.304 ;
+      RECT 38.304 0.000 39.976 0.304 ;
+      RECT 73.872 55.632 74.176 61.080 ;
+      RECT 73.872 51.984 74.176 55.176 ;
+      RECT 73.872 48.336 74.176 51.528 ;
+      RECT 73.872 44.688 74.176 47.880 ;
+      RECT 73.872 41.040 74.176 44.232 ;
+      RECT 73.872 37.392 74.176 40.584 ;
+      RECT 73.872 33.744 74.176 36.936 ;
+      RECT 73.872 30.096 74.176 33.288 ;
+      RECT 73.872 16.112 74.176 29.640 ;
+      RECT 73.872 0.304 74.176 15.656 ;
+      RECT 0.000 0.000 8.360 0.304 ;
+      RECT 8.816 0.000 10.488 0.304 ;
+      RECT 10.944 0.000 12.616 0.304 ;
+      RECT 13.984 0.000 15.656 0.304 ;
+      RECT 17.024 0.000 18.696 0.304 ;
+      RECT 20.064 0.000 21.736 0.304 ;
+      RECT 23.104 0.000 24.776 0.304 ;
+      RECT 26.144 0.000 27.816 0.304 ;
+      RECT 29.184 0.000 30.856 0.304 ;
+      RECT 32.224 0.000 33.896 0.304 ;
+      RECT 35.264 0.000 36.936 0.304 ;
+      RECT 0.000 55.632 0.304 61.080 ;
+      RECT 0.000 51.984 0.304 55.176 ;
+      RECT 0.000 48.336 0.304 51.528 ;
+      RECT 0.000 44.688 0.304 47.880 ;
+      RECT 0.000 41.040 0.304 44.232 ;
+      RECT 0.000 37.392 0.304 40.584 ;
+      RECT 0.000 33.744 0.304 36.936 ;
+      RECT 0.000 30.096 0.304 33.288 ;
+      RECT 0.000 16.112 0.304 29.640 ;
+      RECT 0.000 0.304 0.304 15.656 ;
+      RECT 0.000 61.080 5.043 63.232 ;
+      RECT 7.355 61.080 7.763 63.232 ;
+      RECT 10.067 61.080 74.176 63.232 ;
+      RECT 0.304 0.304 73.872 61.080 ;
   END
 
 END SRAM1R1W1024x32
