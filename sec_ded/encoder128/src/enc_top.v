@@ -1,5 +1,5 @@
 //
-// Encoder for Hsiaod 128 bit DEC
+// Encoder for 128 bit SEC-DED 
 //
 // Authors: Joseph Crowe and Matt Markwell
 //

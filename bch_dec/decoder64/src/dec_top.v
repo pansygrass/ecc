@@ -1,5 +1,5 @@
 //
-// decoder for Hsiaod 64 bit DEC
+// Decoder for 64 bit DEC
 //
 // Authors: Joseph Crowe and Matt Markwell
 //

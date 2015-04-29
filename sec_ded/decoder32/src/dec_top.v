@@ -1,5 +1,5 @@
 //
-// decoder for Hsiaod 32 bit DEC
+// Decoder for 32 bit SEC-DED 
 //
 // Authors: Joseph Crowe and Matt Markwell
 //

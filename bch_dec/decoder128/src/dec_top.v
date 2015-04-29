@@ -1,5 +1,5 @@
 //
-// decoder for Hsiao 128 bit SEC-DED
+// Decoder for 128 bit DEC 
 //
 // Authors: Joseph Crowe and Matt Markwell
 //
